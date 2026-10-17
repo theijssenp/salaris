@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>Bruto-Netto Salaris Calculator 2026 | Gratis Nederlandse Looncalculator</title>
+    <meta name="description" content="Bereken direct je netto salaris met de gratis bruto-netto salaris calculator 2026 voor Nederland. Inclusief loonheffing, heffingskorting, arbeidskorting en AOW-tabel. Accuraat en up-to-date.">
+    <meta name="keywords" content="salaris calculator, bruto netto, netto salaris berekenen, loonheffing 2026, bruto net salaris, salaris berekenen nederland, heffingskorting, arbeidskorting, belasting schijven 2026">
+    <meta name="author" content="salaris.hodc.nl">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://salaris.hodc.nl/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salaris.hodc.nl/">
+    <meta property="og:title" content="Bruto-Netto Salaris Calculator 2026 Nederland">
+    <meta property="og:description" content="Bereken gratis je netto salaris 2026. Inclusief loonheffing, heffingskorting, arbeidskorting en AOW-tabel. Direct online, geen registratie nodig.">
+    <meta property="og:site_name" content="Salaris Calculator Nederland">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bruto-Netto Salaris Calculator 2026 Nederland">
+    <meta name="twitter:description" content="Bereken gratis je netto salaris 2026. Loonheffing, heffingskorting, arbeidskorting - direct online.">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Bruto-Netto Salaris Calculator 2026",
+      "url": "https://salaris.hodc.nl/",
+      "description": "Gratis bruto-netto salaris calculator voor Nederland 2026. Bereken loonheffing, heffingskorting, arbeidskorting en netto inkomen.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "nl-NL",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "salaris.hodc.nl"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoe bereken je je netto salaris in Nederland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je netto salaris is je brutoloon minus de loonheffing (inkomstenbelasting + premies volksverzekeringen), plus de heffingskorting en arbeidskorting. Onze calculator doet deze berekening automatisch met de officiële Belastingdienst parameters 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat zijn de belasting schijven in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In 2026 zijn er drie schijven: schijf 1 tot €38.883 tegen 35,75%, schijf 2 van €38.883 tot €78.426 tegen 37,56%, en schijf 3 boven €78.426 tegen 49,50%. Deze tarieven zijn gecombineerd (loonbelasting + premies volksverzekeringen)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen de witte en groene tabel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De witte tabel geldt voor mensen onder de AOW-leeftijd. De groene tabel geldt voor iedereen die de AOW-leeftijd heeft bereikt, ongeacht het geboortejaar. Het belangrijkste verschil is dat in de groene tabel geen AOW- en ANW-premie wordt gehefd in schijf 1, wat resulteert in een lager tarief."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is deze salaris calculator gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, de salaris calculator is volledig gratis en vereist geen registratie. Je kunt hem zo vaak gebruiken als je wilt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe accuraat is de berekening?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De calculator gebruikt de officiële parameterwaarden van de Belastingdienst voor 2026 (Bijlage parameterwaarden, uitgave januari 2026). Het betreft de standaardsituatie (witte of groene tabel). Voor bijzondere situaties zoals toeslagenpartner, een eigen woning of extra aftrekposten kan de berekening afwijken."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-light: #3b82f6;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --success: #16a34a;
+            --green-bg: #f0fdf4;
+            --green-border: #bbf7d0;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 700px; margin: 0 auto; }
+        nav {
+            display: flex; gap: 20px; justify-content: center;
+            padding: 12px 0; margin-bottom: 10px; flex-wrap: wrap;
+        }
+        nav a { color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { text-decoration: underline; }
+        .header { text-align: center; margin-bottom: 20px; padding: 20px 0; }
+        .header h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 6px; }
+        .header p { color: var(--text-light); font-size: 0.95rem; }
+        .intro-text { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.7; }
+        .card {
+            background: var(--card-bg); border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 20px;
+        }
+        .input-group { display: flex; gap: 12px; align-items: flex-end; }
+        .field { flex: 1; }
+        .field label { display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-weight: 500; }
+        .field input, .field select {
+            width: 100%; padding: 12px 14px; border: 2px solid var(--border);
+            border-radius: 8px; font-size: 1.1rem; font-weight: 600;
+            background: var(--bg); transition: border-color 0.2s;
+        }
+        .field input:focus, .field select:focus { outline: none; border-color: var(--primary); }
+        .euro-prefix { position: relative; }
+        .euro-prefix input { padding-left: 32px; }
+        .euro-prefix::before {
+            content: '\20AC'; position: absolute; left: 12px; top: 50%;
+            transform: translateY(-50%); font-weight: 600;
+            color: var(--text-light); font-size: 1.1rem;
+        }
+        .tabel-indicator {
+            margin-top: 12px; padding: 10px 16px; border-radius: 8px;
+            font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 8px;
+        }
+        .tabel-wit { background: #f0f9ff; border: 1px solid #bfdbfe; color: #1e40af; }
+        .tabel-groen { background: var(--green-bg); border: 1px solid var(--green-border); color: #15803d; }
+        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+        .result-box { background: var(--bg); border-radius: 10px; padding: 16px; text-align: center; }
+        .result-box.netto { background: var(--green-bg); border: 2px solid var(--green-border); }
+        .result-box .label { font-size: 0.82rem; color: var(--text-light); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .result-box .amount { font-size: 1.6rem; font-weight: 700; }
+        .result-box.netto .amount { color: var(--success); font-size: 2rem; }
+        .breakdown { margin-top: 20px; }
+        .breakdown h3 { font-size: 0.9rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .breakdown-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .breakdown-row:last-child { border-bottom: none; }
+        .breakdown-row .desc { color: var(--text-light); }
+        .breakdown-row .val { font-weight: 600; }
+        .breakdown-row.total { padding-top: 12px; margin-top: 4px; border-top: 2px solid var(--primary); font-size: 1.05rem; }
+        .breakdown-row.total .desc { color: var(--text); font-weight: 700; }
+        .breakdown-row.total .val { color: var(--primary); }
+        .negative { color: var(--success); }
+        .bar-container { margin-top: 20px; background: var(--bg); border-radius: 10px; padding: 16px; }
+        .bar-title { font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .bar { height: 32px; border-radius: 6px; overflow: hidden; display: flex; background: #e2e8f0; }
+        .bar-segment { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 600; color: white; min-width: 30px; transition: width 0.3s ease; }
+        .bar-legend { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+        .bar-legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-light); }
+        .bar-legend-color { width: 12px; height: 12px; border-radius: 3px; }
+        .toggle-params { background: none; border: none; color: var(--primary); cursor: pointer; font-size: 0.85rem; padding: 4px 0; margin-top: 10px; }
+        .toggle-params:hover { text-decoration: underline; }
+        .params-detail { display: none; margin-top: 10px; font-size: 0.8rem; color: var(--text-light); line-height: 1.7; }
+        .params-detail.visible { display: block; }
+        .content-section {
+            background: var(--card-bg); border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 20px;
+        }
+        .content-section h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
+        .content-section h3 { font-size: 1.05rem; color: var(--text); margin-top: 18px; margin-bottom: 6px; }
+        .content-section p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 10px; }
+        .content-section ul { list-style: none; padding: 0; }
+        .content-section ul li { font-size: 0.92rem; color: var(--text-light); padding: 6px 0; padding-left: 24px; position: relative; }
+        .content-section ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--primary); font-weight: 600; }
+        .faq-item { margin-bottom: 16px; }
+        .faq-item h3 { font-size: 1rem; color: var(--text); margin-bottom: 4px; }
+        .faq-item p { font-size: 0.9rem; color: var(--text-light); }
+        .link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+        .link-card { background: var(--bg); border-radius: 8px; padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s; }
+        .link-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .link-card h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 4px; }
+        .link-card p { font-size: 0.82rem; color: var(--text-light); }
+        footer { text-align: center; padding: 20px 0; color: var(--text-light); font-size: 0.82rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 500px) {
+            .input-group { flex-direction: column; }
+            .result-grid { grid-template-columns: 1fr; }
+            .result-box.netto .amount { font-size: 1.6rem; }
+            .header h1 { font-size: 1.4rem; }
+            .link-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6426090550720509"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Calculator</a>
+            <a href="/dga-salaris.html">DGA salaris</a>
+            <a href="/dga-loonaangifte.html">DGA loonaangifte</a>
+            <a href="/salaris-per-beroep.html">Salaris per beroep</a>
+            <a href="/belasting-schijven-2026.html">Belasting schijven</a>
+            <a href="/hoe-bereken-je-netto-salaris.html">Hoe bereken je netto?</a>
+            <a href="/faq.html">Veelgestelde vragen</a>
+            <a href="/over-ons.html">Over ons</a>
+        </nav>
+
+        <div class="header">
+            <h1>Bruto-Netto Salaris Calculator</h1>
+            <p>Nederland 2026 &middot; Witte &amp; Groene tabel &middot; Officiele Belastingdienst parameters</p>
+        </div>
+
+        <p class="intro-text">
+            Bereken in seconden je netto salaris voor 2026. Vul je brutoloon in en zie direct
+            wat er netto op je rekening verschijnt, inclusief loonheffing, heffingskorting en
+            arbeidskorting. De calculator gebruikt de actuele parameterwaarden van de
+            Belastingdienst. Gratis, geen registratie, direct online.
+        </p>
+
+        <div class="card">
+            <div class="input-group">
+                <div class="field euro-prefix">
+                    <label for="bruto">Bruto salaris</label>
+                    <input type="number" id="bruto" value="3000" min="0" step="100" placeholder="3000">
+                </div>
+                <div class="field">
+                    <label for="periode">Per</label>
+                    <select id="periode">
+                        <option value="maand" selected>Maand</option>
+                        <option value="jaar">Jaar</option>
+                        <option value="4weken">4 Weken</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="aow">AOW-leeftijd bereikt?</label>
+                    <select id="aow">
+                        <option value="nee" selected>Nee</option>
+                        <option value="ja">Ja</option>
+                    </select>
+                </div>
+            </div>
+            <div id="tabelIndicator" class="tabel-indicator tabel-wit">
+                <span id="tabelIcon">&#x1f4cb;</span>
+                <span id="tabelText">Witte tabel &middot; Onder AOW-leeftijd</span>
+            </div>
+        </div>
+
+        <div class="card" id="results" style="display:none;">
+            <div class="result-grid">
+                <div class="result-box netto">
+                    <div class="label">Netto per maand</div>
+                    <div class="amount" id="netto-maand">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Effectief tarief</div>
+                    <div class="amount" id="eff-tarief">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Loonheffing per maand</div>
+                    <div class="amount" id="lh-maand">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Netto per jaar</div>
+                    <div class="amount" id="netto-jaar">-</div>
+                </div>
+            </div>
+
+            <div class="breakdown">
+                <h3>Specificatie per jaar</h3>
+                <div id="breakdown-rows"></div>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar-title">Verdeling brutoloon</div>
+                <div class="bar" id="tax-bar"></div>
+                <div class="bar-legend">
+                    <div class="bar-legend-item">
+                        <div class="bar-legend-color" style="background:#16a34a"></div>
+                        <span>Netto</span>
+                    </div>
+                    <div class="bar-legend-item">
+                        <div class="bar-legend-color" style="background:#dc2626"></div>
+                        <span>IB / Inkomstenbelasting</span>
+                    </div>
+                    <div class="bar-legend-item">
+                        <div class="bar-legend-color" style="background:#06b6d4"></div>
+                        <span>Kortingen (AHK/ARK/OUK)</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="toggle-params" onclick="toggleParams()">
+                &#9660; Toon/verberg parameters 2026
+            </button>
+            <div class="params-detail" id="params-detail">
+                <div id="params-wit">
+                    <strong>Witte tabel (onder AOW-leeftijd, standaard)</strong><br>
+                    Schijf 1: &euro;0 &ndash; &euro;38.883 &times; 35,75% (IB 8,10% + premies 27,65%)<br>
+                    Schijf 2: &euro;38.883 &ndash; &euro;78.426 &times; 37,56% (alleen premies)<br>
+                    Schijf 3: &gt; &euro;78.426 &times; 49,50% (IB + premies)<br>
+                    AHK: max &euro;3.115, fase-uit 6,398% boven &euro;29.736<br>
+                    ARK: max &euro;5.685 bij &euro;45.592, daarboven afbouw 6,51% tot &euro;0 bij &euro;132.920<br>
+                </div>
+                <div id="params-groen" style="display:none;">
+                    <strong>Groene tabel (AOW-leeftijd bereikt, schijfgrens voor geboren in 1946 of later)</strong><br>
+                    Schijf 1: &euro;0 &ndash; &euro;38.883 &times; 17,85% (IB 8,10% + Wlz 9,75%, geen AOW/ANW)<br>
+                    Schijf 2: &euro;38.883 &ndash; &euro;78.426 &times; 37,56% (premies Wlz+AOW/ANW)<br>
+                    Schijf 3: &gt; &euro;78.426 &times; 49,50% (IB + premies)<br>
+                    AHK: max &euro;1.556, fase-uit 3,195% boven &euro;29.736<br>
+                    ARK: max &euro;2.840 bij &euro;45.592, daarboven afbouw 3,25% tot &euro;0 bij &euro;132.920<br>
+                    Ouderenkorting: max &euro;2.067, fase-uit 15% boven &euro;46.002<br>
+                </div>
+                <br>
+                Bron: <em>Bijlage parameterwaarden 2026</em> (Belastingdienst, uitgave januari 2026)
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Wat berekent deze salaris calculator?</h2>
+            <p>
+                Deze calculator zet je bruto jaarsalaris om in netto inkomen volgens de Nederlandse
+                belastingregels voor 2026. De berekening omvat:
+            </p>
+            <ul>
+                <li>Loonheffing (inkomstenbelasting + premies volksverzekeringen AOW, ANW en Wlz)</li>
+                <li>Algemene heffingskorting (AHK) met automatische fase-uit bij hogere inkomens</li>
+                <li>Arbeidskorting (ARK) met vier inkomensbanden en fase-uit</li>
+                <li>Keuze tussen witte tabel (onder AOW-leeftijd) en groene tabel (AOW-leeftijd bereikt)</li>
+                <li>Ouderenkorting voor de groene tabel</li>
+                <li>Effectief belastingtarief en visuele verdeling van je brutoloon</li>
+            </ul>
+            <p>
+                De parameterwaarden zijn gebaseerd op de officiële publicatie van de Belastingdienst
+                (Bijlage parameterwaarden 2026, uitgave januari 2026).
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Veelgestelde vragen</h2>
+            <div class="faq-item">
+                <h3>Hoe bereken je je netto salaris in Nederland?</h3>
+                <p>
+                    Je netto salaris is je brutoloon minus de loonheffing, plus de heffingskorting
+                    en arbeidskorting. Onze calculator doet deze berekening automatisch met de
+                    actuele Belastingdienst parameters 2026. Vul je brutoloon in en je ziet direct
+                    het resultaat.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Wat zijn de belasting schijven in 2026?</h3>
+                <p>
+                    Er zijn drie schijven: 35,75% tot &euro;38.883, 37,56% tot &euro;78.426 en 49,50%
+                    daarboven. Deze gecombineerde tarieven omvatten loonbelasting en premies
+                    volksverzekeringen.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Wat is het verschil tussen de witte en groene tabel?</h3>
+                <p>
+                    De witte tabel geldt voor iedereen onder de AOW-leeftijd. De groene tabel is
+                    voor iedereen die de AOW-leeftijd heeft bereikt, ongeacht het geboortejaar. In
+                    de groene tabel betaal je geen AOW- en ANW-premie in schijf 1, waardoor het
+                    tarief lager is (17,85% in plaats van 35,75%).
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Is deze salaris calculator gratis?</h3>
+                <p>Ja, volledig gratis en zonder registratie. Gebruik de calculator zo vaak je wilt.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Hoe accuraat is de berekening?</h3>
+                <p>
+                    De calculator gebruikt de officiële Belastingdienst parameters voor 2026. Het
+                    betreft de standaardsituatie (witte of groene tabel). Bijzondere situaties
+                    zoals een eigen woning, toeslagenpartner of extra aftrekposten kunnen het
+                    resultaat beinvloeden.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Meer informatie</h2>
+            <div class="link-grid">
+                <a class="link-card" href="/dga-salaris.html">
+                    <h4>DGA salaris calculator</h4>
+                    <p>Gebruikelijk loon voor de DGA van een BV, met Vpb en box 2 dividend.</p>
+                </a>
+                <a class="link-card" href="/dga-loonaangifte.html">
+                    <h4>DGA loonaangifte</h4>
+                    <p>Invulhulp voor de aangifte loonheffingen van de DGA, per maand of 4 weken.</p>
+                </a>
+                <a class="link-card" href="/salaris-per-beroep.html">
+                    <h4>Salaris per beroep</h4>
+                    <p>Wat verdien je per beroep? 115 beroepen met bandbreedte, op CBS-cijfers.</p>
+                </a>
+                <a class="link-card" href="/belasting-schijven-2026.html">
+                    <h4>Belasting schijven 2026</h4>
+                    <p>Alle tarieven en grenzen duidelijk uitgelegd, inclusief voorbeelden.</p>
+                </a>
+                <a class="link-card" href="/hoe-bereken-je-netto-salaris.html">
+                    <h4>Hoe bereken je netto salaris?</h4>
+                    <p>Stap-voor-stap uitleg van bruto naar netto, met alle kortingen.</p>
+                </a>
+                <a class="link-card" href="/faq.html">
+                    <h4>Veelgestelde vragen</h4>
+                    <p>Antwoorden op alle vragen over salaris, belasting en kortingen.</p>
+                </a>
+                <a class="link-card" href="/over-ons.html">
+                    <h4>Over ons</h4>
+                    <p>Wie zijn wij en hoe werken onze calculators?</p>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 salaris.hodc.nl &middot; <a href="/privacy-policy.html">Privacybeleid</a> &middot; <a href="/over-ons.html">Over ons</a></p>
+            <p>Deze calculator is een hulpmiddel en geen fiscaal advies.</p>
+        </footer>
+    </div>
+
+    <script>
+    const WIT = {
+        label: 'Witte tabel \u00b7 Onder AOW-leeftijd',
+        cssClass: 'tabel-wit', icon: '\u1f4cb',
+        a2: 38883, a3: 78426, b1: 0.3575, b2: 0.3756, b3: 0.4950, c2: 13900, c3: 28752,
+        AHK_MAX: 3115, AHK_G1: 29736, AHK_G2: 78426, AHK_RATE: 0.06398,
+        ARK_G1: 11965, ARK_G2: 25845, ARK_G3: 45592, ARK_G4: 132920,
+        ARK_R1: 0.08324, ARK_R2: 0.31009, ARK_R3: 0.01950, ARK_RATE_OUT: 0.06510,
+        OUK_MAX: 0, OUK_G1: 0, OUK_RATE: 0, OUK_G2: 0,
+        ib1: 0.0810, premie_aow: 0.1795, premie_anw: 0.0060, premie_wlz: 0.0910
+    };
+    const GROEN_1946 = {
+        label: 'Groene tabel \u00b7 AOW-leeftijd bereikt',
+        cssClass: 'tabel-groen', icon: '\ud83d\udfe2',
+        a2: 38883, a3: 78426, b1: 0.1785, b2: 0.3756, b3: 0.4950, c2: 6940, c3: 21792,
+        AHK_MAX: 1556, AHK_G1: 29736, AHK_G2: 78426, AHK_RATE: 0.03195,
+        ARK_G1: 11965, ARK_G2: 25845, ARK_G3: 45592, ARK_G4: 132920,
+        ARK_R1: 0.04156, ARK_R2: 0.15483, ARK_R3: 0.00974, ARK_RATE_OUT: 0.03250,
+        OUK_MAX: 2067, OUK_G1: 46002, OUK_G2: 59782, OUK_RATE: 0.15000,
+        ib1: 0.0810, premie_aow: 0, premie_anw: 0, premie_wlz: 0.0975
+    };
+    function getTable(aowReached) { return aowReached ? GROEN_1946 : WIT; }
+    function calcLoonheffing(L, t) {
+        if (L <= 0) return 0;
+        if (L <= t.a2) return t.b1 * L;
+        if (L <= t.a3) return t.c2 + t.b2 * (L - t.a2);
+        return t.c3 + t.b3 * (L - t.a3);
+    }
+    function calcAhk(L, t) {
+        if (L <= t.AHK_G1) return t.AHK_MAX;
+        if (L <= t.AHK_G2) return Math.max(0, t.AHK_MAX - t.AHK_RATE * (L - t.AHK_G1));
+        return 0;
+    }
+    function calcArk(L, t) {
+        if (L <= 0) return 0;
+        if (L <= t.ARK_G1) return t.ARK_R1 * L;
+        var ark1 = t.ARK_R1 * t.ARK_G1;
+        if (L <= t.ARK_G2) return ark1 + t.ARK_R2 * (L - t.ARK_G1);
+        var ark2 = ark1 + t.ARK_R2 * (t.ARK_G2 - t.ARK_G1);
+        if (L <= t.ARK_G3) return ark2 + t.ARK_R3 * (L - t.ARK_G2);
+        // Boven ARK_G3 wordt de arbeidskorting afgebouwd; bij ARK_G4 is die nul
+        var maxArk = ark2 + t.ARK_R3 * (t.ARK_G3 - t.ARK_G2);
+        if (L >= t.ARK_G4) return 0;
+        return Math.max(0, maxArk - t.ARK_RATE_OUT * (L - t.ARK_G3));
+    }
+    function calcOuk(L, t) {
+        if (t.OUK_MAX === 0) return 0;
+        if (L <= 0) return 0;
+        if (L <= t.OUK_G1) return t.OUK_MAX;
+        if (L <= t.OUK_G2) return Math.max(0, t.OUK_MAX - t.OUK_RATE * (L - t.OUK_G1));
+        return 0;
+    }
+    function fmt(n) { return '\u20ac' + n.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+    function calculate() {
+        var bruto = parseFloat(document.getElementById('bruto').value) || 0;
+        var periode = document.getElementById('periode').value;
+        var aowReached = document.getElementById('aow').value === 'ja';
+        var t = getTable(aowReached);
+        var isGreen = (t !== WIT);
+        var indicator = document.getElementById('tabelIndicator');
+        indicator.className = 'tabel-indicator ' + (isGreen ? 'tabel-groen' : 'tabel-wit');
+        document.getElementById('tabelIcon').innerHTML = isGreen ? '\uD83D\uDFE2' : '\uD83D\uDCCB';
+        document.getElementById('tabelText').textContent = t.label;
+        document.getElementById('params-wit').style.display = isGreen ? 'none' : 'block';
+        document.getElementById('params-groen').style.display = isGreen ? 'block' : 'none';
+        var brutoJaar;
+        if (periode === 'maand') brutoJaar = bruto * 12;
+        else if (periode === '4weken') brutoJaar = bruto * 13;
+        else brutoJaar = bruto;
+        var grossTax = calcLoonheffing(brutoJaar, t);
+        var ahk = calcAhk(brutoJaar, t);
+        var ark = calcArk(brutoJaar, t);
+        var ouk = calcOuk(brutoJaar, t);
+        var netTax = Math.max(0, grossTax - ahk - ark - ouk);
+        var netto = brutoJaar - netTax;
+        var effTarief = brutoJaar > 0 ? (netTax / brutoJaar * 100) : 0;
+        var nettoMaand = netto / 12;
+        var lhMaand = netTax / 12;
+        document.getElementById('results').style.display = 'block';
+        document.getElementById('netto-maand').textContent = fmt(nettoMaand);
+        document.getElementById('eff-tarief').textContent = effTarief.toFixed(1) + '%';
+        document.getElementById('lh-maand').textContent = fmt(lhMaand);
+        document.getElementById('netto-jaar').textContent = fmt(netto);
+        var rows = '';
+        rows += '<div class="breakdown-row"><span class="desc">Bruto inkomen</span><span class="val">' + fmt(brutoJaar) + '</span></div>';
+        rows += '<div class="breakdown-row"><span class="desc">Loonheffing (bruto)</span><span class="val">' + fmt(grossTax) + '</span></div>';
+        rows += '<div class="breakdown-row"><span class="desc">\u2500 Algemene heffingskorting</span><span class="val negative">-' + fmt(ahk) + '</span></div>';
+        rows += '<div class="breakdown-row"><span class="desc">\u2500 Arbeidskorting</span><span class="val negative">-' + fmt(ark) + '</span></div>';
+        if (isGreen) { rows += '<div class="breakdown-row"><span class="desc">\u2500 Ouderenkorting</span><span class="val negative">-' + fmt(ouk) + '</span></div>'; }
+        rows += '<div class="breakdown-row total"><span class="desc">Loonheffing (netto)</span><span class="val">' + fmt(netTax) + '</span></div>';
+        rows += '<div class="breakdown-row total"><span class="desc">Netto inkomen</span><span class="val" style="color:#16a34a;">' + fmt(netto) + '</span></div>';
+        document.getElementById('breakdown-rows').innerHTML = rows;
+        var nettoPct = brutoJaar > 0 ? (netto / brutoJaar * 100) : 100;
+        var creditsPct = brutoJaar > 0 ? ((ahk + ark + ouk) / brutoJaar * 100) : 0;
+        var taxPct = brutoJaar > 0 ? (netTax / brutoJaar * 100) : 0;
+        var bar = document.getElementById('tax-bar');
+        bar.innerHTML = '<div class="bar-segment" style="width:' + nettoPct + '%;background:#16a34a;">' + (nettoPct > 15 ? nettoPct.toFixed(0) + '%' : '') + '</div>' +
+            '<div class="bar-segment" style="width:' + taxPct + '%;background:#dc2626;">' + (taxPct > 10 ? taxPct.toFixed(0) + '%' : '') + '</div>' +
+            '<div class="bar-segment" style="width:' + creditsPct + '%;background:#06b6d4;">' + (creditsPct > 8 ? creditsPct.toFixed(0) + '%' : '') + '</div>';
+    }
+    function toggleParams() { document.getElementById('params-detail').classList.toggle('visible'); }
+    document.getElementById('bruto').addEventListener('input', calculate);
+    document.getElementById('periode').addEventListener('change', calculate);
+    document.getElementById('aow').addEventListener('change', calculate);
+    calculate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://salaris.hodc.nl/sitemap.xml

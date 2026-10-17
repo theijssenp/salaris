@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>Salaris per beroep 2026 | Netto maandloon van 115 beroepen (CBS)</title>
+    <meta name="description" content="Bekijk het gemiddelde salaris per beroep in Nederland: netto en bruto maandloon van 115 beroepen, met bandbreedte (25e-75e percentiel). Gebaseerd op officiële CBS-cijfers 2025, gratis en zonder registratie.">
+    <meta name="keywords" content="salaris per beroep, gemiddeld salaris beroepen, wat verdien je per beroep, netto salaris beroepen, salarisvergelijking, CBS salaris, hoeveel verdient een, loon per beroep 2026">
+    <meta name="author" content="salaris.hodc.nl">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://salaris.hodc.nl/salaris-per-beroep.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salaris.hodc.nl/salaris-per-beroep.html">
+    <meta property="og:title" content="Salaris per beroep 2026 | Netto maandloon van 115 beroepen">
+    <meta property="og:description" content="Wat verdien je per beroep? Netto en bruto maandloon van 115 Nederlandse beroepen met bandbreedte, gebaseerd op CBS-cijfers.">
+    <meta property="og:site_name" content="Salaris Calculator Nederland">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salaris per beroep 2026 | 115 beroepen vergeleken">
+    <meta name="twitter:description" content="Netto en bruto maandloon van 115 beroepen met bandbreedte. CBS-cijfers, gratis in te zien.">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Salaris per beroep Nederland 2026",
+      "description": "Netto en bruto maandloon van 115 Nederlandse beroepen met 25e-75e percentiel bandbreedte, gebaseerd op CBS StatLine tabel 86355NED.",
+      "url": "https://salaris.hodc.nl/salaris-per-beroep.html",
+      "creator": { "@type": "Organization", "name": "salaris.hodc.nl" },
+      "inLanguage": "nl-NL",
+      "variableMeasured": ["bruto uurloon p25", "bruto uurloon mediaan", "bruto uurloon p75", "netto maandloon", "aantal werknemers"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wat verdient de gemiddelde Nederlander per beroep?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Het gemiddelde bruto uurloon van alle Nederlandse werknemers was in 2025 €26,90 (mediaan). Bij 144 uur per maand komt dat neer op ongeveer €3.874 bruto per maand, of ongeveer €3.121 netto. Het exacte bedrag verschilt sterk per beroep: van ongeveer €1.600 netto voor een vakkenvuller tot meer dan €5.100 netto voor een overheidsbestuurder (mediaan)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waar komen de salariscijfers op deze pagina vandaan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De cijfers komen uit CBS StatLine tabel 86355NED (Werknemers; uurloon en beroep, BRC 2014). CBS publiceert het bruto uurloon op de 25e, 50e en 75e percentiel per beroep. Wij rekenen het uurloon om naar een maandloon bij een gemiddelde baan van 144 uur per maand en berekenen het netto bedrag met de officiële Belastingdienst-parameters 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe kan ik mijn salaris vergelijken met andere beroepen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gebruik de zoekbalk of het filter om je eigen beroep te vinden in de tabel. De bandbreedte per beroep toont het salaris van de middelste 50% van de werknemers: 25% verdient minder dan de onderkant van de balk en 25% meer dan de bovenkant. Met de widget 'Waar sta jij?' vul je je eigen salaris in en zie je boven hoeveel procent van de beroepen je verdient."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waarom heeft niet elk beroep eigen cijfers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CBS publiceert geen cijfers voor elk detailberoep, bijvoorbeeld wegens te weinig waarnemingen. Voor die beroepen tonen wij de bandbreedte van de bovenliggende beroepsgroep of de meest recente definitieve cijfers van 2024, en dat staat bij het beroep vermeld."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-light: #3b82f6;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --success: #16a34a;
+            --green-bg: #f0fdf4;
+            --green-border: #bbf7d0;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1a56db 100%);
+            color: #fff;
+            padding: 40px 0 48px;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 10px; }
+        header p { opacity: .9; max-width: 640px; margin: 0 auto; font-size: 1.02rem; }
+        .badge {
+            display: inline-block; background: rgba(255,255,255,.14);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 999px; padding: 4px 14px; font-size: .8rem;
+            margin-top: 14px; opacity: .95;
+        }
+
+        nav.subnav {
+            background: var(--card-bg); border-bottom: 1px solid var(--border);
+        }
+        nav.subnav .inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 20px;
+            display: flex; gap: 22px; overflow-x: auto; align-items: center; height: 54px;
+        }
+        nav.subnav a {
+            color: var(--text-light); text-decoration: none; font-size: .92rem;
+            white-space: nowrap; font-weight: 500;
+        }
+        nav.subnav a:hover { color: var(--primary); }
+        nav.subnav a.active { color: var(--primary); font-weight: 600; }
+        nav.subnav .brand { font-weight: 700; color: var(--text); margin-right: 8px; }
+
+        .content-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 24px 0;
+        }
+        .content-section h2 { font-size: 1.3rem; margin-bottom: 14px; }
+        .content-section p { color: #334155; margin-bottom: 12px; }
+        .content-section ul { color: #334155; margin: 0 0 12px 20px; }
+
+        /* Toolbar */
+        .toolbar {
+            display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+            margin: 22px 0 14px;
+        }
+        .search-wrap { position: relative; flex: 1 1 260px; max-width: 380px; }
+        .search-wrap input {
+            width: 100%; padding: 11px 38px 11px 14px; font-size: 1rem;
+            border: 1.5px solid var(--border); border-radius: 10px;
+            background: var(--card-bg); color: var(--text);
+        }
+        .search-wrap input:focus { outline: none; border-color: var(--primary); }
+        .search-clear {
+            position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+            border: none; background: #eef2f7; color: var(--text-light);
+            width: 26px; height: 26px; border-radius: 50%; cursor: pointer; font-size: .85rem;
+            display: none;
+        }
+        .search-clear:hover { background: #e2e8f0; }
+        .poplist {
+            position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 50;
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 10px; box-shadow: 0 12px 32px rgba(15,23,42,.14);
+            max-height: 320px; overflow-y: auto; display: none;
+        }
+        .poplist.open { display: block; }
+        .poplist-item {
+            padding: 10px 14px; cursor: pointer; display: flex;
+            justify-content: space-between; gap: 12px; align-items: baseline;
+        }
+        .poplist-item:hover, .poplist-item.sel { background: #eff6ff; }
+        .poplist-item .nm { font-size: .95rem; }
+        .poplist-item .nm b { color: var(--primary); }
+        .poplist-item .amt { color: var(--text-light); font-size: .85rem; white-space: nowrap; }
+        .poplist-empty { padding: 14px; color: var(--text-light); font-size: .92rem; }
+        select, .toggle-btn {
+            padding: 10px 14px; font-size: .95rem; border: 1.5px solid var(--border);
+            border-radius: 10px; background: var(--card-bg); color: var(--text); cursor: pointer;
+        }
+        .toggle-btn { background: #eff6ff; border-color: #bfdbfe; color: var(--primary); font-weight: 600; }
+        .toggle-btn:hover { background: #dbeafe; }
+
+        /* Stat strip */
+        .stat-strip { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 14px; margin: 20px 0 6px; }
+        .stat {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 12px; padding: 16px 18px;
+        }
+        .stat .v { font-size: 1.45rem; font-weight: 700; color: var(--primary); }
+        .stat .l { color: var(--text-light); font-size: .85rem; }
+
+        /* Tabel */
+        .table-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 18px 0; }
+        table.ber { width: 100%; border-collapse: collapse; }
+        table.ber th {
+            text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
+            color: var(--text-light); padding: 12px 14px; border-bottom: 2px solid var(--border);
+            background: #f8fafc; position: sticky; top: 0; cursor: pointer; user-select: none; white-space: nowrap;
+        }
+        table.ber th:hover { color: var(--primary); }
+        table.ber td { padding: 11px 14px; border-bottom: 1px solid #f1f5f9; font-size: .95rem; vertical-align: middle; }
+        table.ber tr:hover td { background: #f8fbff; }
+        td.bnm { font-weight: 600; }
+        td.bnm .sub { display: block; font-weight: 400; color: var(--text-light); font-size: .78rem; }
+        .bandcell { min-width: 210px; }
+        .band { position: relative; height: 22px; background: #eef2f7; border-radius: 6px; overflow: hidden; }
+        .band .fill {
+            position: absolute; top: 0; bottom: 0; border-radius: 6px;
+            background: linear-gradient(90deg, rgba(26,86,219,.35), rgba(26,86,219,.85));
+        }
+        .band .med {
+            position: absolute; top: -3px; bottom: -3px; width: 3px; background: #dc2626;
+            border-radius: 2px; transform: translateX(-1.5px);
+        }
+        .bandlabels { display: flex; justify-content: space-between; font-size: .72rem; color: var(--text-light); margin-top: 3px; }
+        td.money { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+        td.money small { color: var(--text-light); font-size: .75rem; display: block; }
+        .src-pill {
+            display: inline-block; font-size: .68rem; border-radius: 999px; padding: 2px 8px;
+            background: #f1f5f9; color: var(--text-light); white-space: nowrap;
+        }
+        .src-pill.old { background: var(--warning-bg); color: var(--warning); }
+        .hg-head td {
+            background: #eff6ff; font-weight: 700; color: #1e3a8a;
+            font-size: .9rem; border-bottom: 1px solid #bfdbfe;
+        }
+
+        /* Waar sta jij widget */
+        .wsj-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        @media (min-width: 760px) { .wsj-grid { grid-template-columns: 320px 1fr; } }
+        .wsj-box { border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+        .wsj-box h3 { margin-bottom: 12px; font-size: 1.05rem; }
+        .wsj-input-row { display: flex; gap: 10px; }
+        .wsj-input-row input {
+            flex: 1; padding: 11px 14px; font-size: 1.05rem; border: 1.5px solid var(--border);
+            border-radius: 10px; width: 100%;
+        }
+        .wsj-input-row input:focus { outline: none; border-color: var(--primary); }
+        .wsj-result { margin-top: 14px; }
+        .wsj-big { font-size: 1.15rem; margin-bottom: 8px; }
+        .wsj-big b { color: var(--primary); font-size: 1.5rem; }
+        .wsj-list { color: #334155; font-size: .9rem; }
+        .wsj-list li { margin-bottom: 4px; }
+        .wsj-hint { color: var(--text-light); font-size: .82rem; margin-top: 10px; }
+        .wsj-bar { height: 14px; background: #eef2f7; border-radius: 7px; position: relative; margin: 6px 0 10px; }
+        .wsj-bar .pos { position: absolute; top: -4px; width: 4px; height: 22px; background: var(--primary); border-radius: 2px; }
+        .wsj-bar .lab { display: flex; justify-content: space-between; font-size: .75rem; color: var(--text-light); }
+
+        .top-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+        .top-card { border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+        .top-card h3 { font-size: 1rem; margin-bottom: 12px; }
+        .top-card ol { margin-left: 18px; color: #334155; font-size: .92rem; }
+        .top-card li { margin-bottom: 6px; }
+        .top-card .amt { float: right; font-weight: 600; color: var(--primary); font-variant-numeric: tabular-nums; }
+        .top-card.laag .amt { color: #b45309; }
+
+        .note {
+            background: var(--warning-bg); border: 1px solid #fde68a; border-radius: 10px;
+            padding: 14px 16px; color: #92400e; font-size: .9rem; margin: 18px 0;
+        }
+        .link-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;
+        }
+        .link-card {
+            border: 1px solid var(--border); border-radius: 10px; padding: 16px;
+            text-decoration: none; color: inherit; display: block; transition: .15s;
+        }
+        .link-card:hover { border-color: var(--primary); box-shadow: 0 4px 14px rgba(26,86,219,.08); }
+        .link-card h4 { color: var(--primary); margin-bottom: 4px; font-size: .98rem; }
+        .link-card p { color: var(--text-light); font-size: .85rem; margin: 0; }
+
+        footer { text-align: center; color: var(--text-light); font-size: .85rem; padding: 28px 0 40px; }
+        footer a { color: var(--text-light); }
+        .hidden { display: none; }
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.5rem; }
+            .bandcell { min-width: 150px; }
+            table.ber td, table.ber th { padding: 9px 8px; }
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6426090550720509"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="subnav">
+        <div class="inner">
+            <a class="brand" href="/">💰 salaris.hodc.nl</a>
+            <a href="/">Calculator</a>
+            <a href="/dga-salaris.html">DGA salaris</a>
+            <a href="/dga-loonaangifte.html">DGA loonaangifte</a>
+            <a href="/belasting-schijven-2026.html">Belasting schijven</a>
+            <a class="active" href="/salaris-per-beroep.html">Salaris per beroep</a>
+            <a href="/hoe-bereken-je-netto-salaris.html">Hoe bereken je netto?</a>
+            <a href="/faq.html">Veelgestelde vragen</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Salaris per beroep 2026</h1>
+        <p>Wat verdien je per beroep? Netto en bruto maandloon van 115 Nederlandse beroepen,
+        met de bandbreedte waarbinnen het salaris ligt. Officiële CBS-cijfers.</p>
+        <span class="badge">Bron: CBS StatLine 86355NED &middot; BRC 2014 &middot; 2025 (voorlopig)</span>
+    </header>
+
+    <div class="container">
+
+        <div class="stat-strip" id="stat-strip"></div>
+
+        <div class="toolbar">
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Zoek een beroep&hellip; (bijv. verpleegkundige)" autocomplete="off">
+                <button class="search-clear" id="search-clear" title="Wissen">&times;</button>
+                <div class="poplist" id="poplist"></div>
+            </div>
+            <select id="hg-filter">
+                <option value="">Alle sectoren</option>
+            </select>
+            <select id="sort-filter">
+                <option value="medn">Sorteer: hoogste netto mediaan</option>
+                <option value="medn-asc">Laagste netto mediaan</option>
+                <option value="naam">A-Z</option>
+                <option value="werknemers">Meest beoefend</option>
+            </select>
+            <button class="toggle-btn" id="btn-bruto">Bruto ⇄ Netto</button>
+        </div>
+
+        <div class="table-card">
+            <table class="ber" id="beroepen-tabel">
+                <thead>
+                    <tr>
+                        <th data-k="naam">Beroep</th>
+                        <th data-k="band">Bandbreedte p25&ndash;p75</th>
+                        <th data-k="medn" class="money">Mediaan netto</th>
+                        <th data-k="werknemers" class="money">Werknemers</th>
+                        <th data-k="src">Bron</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+            <div style="padding:14px 16px; color:var(--text-light); font-size:.85rem; border-top:1px solid var(--border);" id="teller"></div>
+        </div>
+
+        <div class="content-section">
+            <h2>Waar sta jij? Vergelijk je salaris met 115 beroepen</h2>
+            <div class="wsj-grid">
+                <div class="wsj-box">
+                    <h3>Jouw bruto maandloon</h3>
+                    <div class="wsj-input-row">
+                        <input type="number" id="wsj-bruto" placeholder="bijv. 3200" min="0" step="50">
+                        <button class="toggle-btn" id="wsj-go">Vergelijk</button>
+                    </div>
+                    <div class="wsj-result" id="wsj-result">
+                        <p class="wsj-hint">Type je bruto maandsalaris (fulltime) en zie direct
+                        hoe je positie is vergeleken met de mediane beroepen.</p>
+                    </div>
+                </div>
+                <div class="wsj-box">
+                    <h3>Positie op de salarisradar</h3>
+                    <div id="wsj-radar"><p class="wsj-hint">Vul links je salaris in om je positie te zien.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Best en minst betaalde beroepen van Nederland</h2>
+            <div class="top-grid" id="top-grid"></div>
+        </div>
+
+        <div class="content-section">
+            <h2>Over deze cijfers en methodiek</h2>
+            <p>
+                CBS meet het salaris per beroep als <strong>bruto uurloon</strong> en publiceert per beroep
+                de 25e percentiel (ondergrens band), de mediaan (midden) en de 75e percentiel (bovengrens band).
+                De band in de tabel toont dus waar de <strong>middelste 50% van de werknemers</strong> in dat
+                beroep zit: 25% verdient minder, 25% meer.
+            </p>
+            <ul>
+                <li><strong>Omrekening:</strong> uurloon &times; 144 uur per maand (gemiddelde voltijdbaan van 36 uur per week).</li>
+                <li><strong>Netto:</strong> berekend met de officiële Belastingdienst-parameters 2026 (witte tabel, onder AOW-leeftijd), zelfde berekening als onze <a href="/">bruto-netto calculator</a>.</li>
+                <li><strong>Bron:</strong> CBS StatLine tabel <a href="https://www.cbs.nl/nl-nl/cijfers/detail/86355NED" rel="nofollow">86355NED &mdash; Werknemers; uurloon en beroep</a>, jaarcijfers 2025 (voorlopig).</li>
+                <li><strong>Onderdrukte cijfers:</strong> waar CBS het uurloon van een beroep niet publiceert, gebruiken wij de bovenliggende beroepsgroep of de definitieve 2024-cijfers. Dat staat per beroep in de kolom Bron.</li>
+                <li><strong>Beropensysteem:</strong> Beroepenindeling BRC 2014 (editie 2025), de Nederlandse standaard op basis van ISCO 2008.</li>
+            </ul>
+            <div class="note">
+                <strong>Let op:</strong> cijfers gaan over werknemers (15&ndash;75 jaar, exclusief dga's en zelfstandigen).
+                Zelfstandigen, flexwerkers en dga's zitten niet in de dataset. Uurloon is exclusief vakantiegeld,
+                eindejaarsuitkering en andere bijzondere beloningen; je reële jaarinkomen ligt daarom doorgaans iets hoger.
+                Deze pagina is een hulpmiddel en geen fiscaal advies.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Meer informatie</h2>
+            <div class="link-grid">
+                <a class="link-card" href="/">
+                    <h4>Bruto-netto calculator</h4>
+                    <p>Bereken je eigen netto salaris met de parameters van 2026.</p>
+                </a>
+                <a class="link-card" href="/minimumloon-2026.html">
+                    <h4>Minimumloon 2026</h4>
+                    <p>Alle wettelijke minimumbedragen per dag, week en maand.</p>
+                </a>
+                <a class="link-card" href="/belasting-schijven-2026.html">
+                    <h4>Belasting schijven 2026</h4>
+                    <p>Alle tarieven en grenzen duidelijk uitgelegd.</p>
+                </a>
+                <a class="link-card" href="/faq.html">
+                    <h4>Veelgestelde vragen</h4>
+                    <p>Antwoorden over salaris, belasting en kortingen.</p>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 salaris.hodc.nl &middot; <a href="/privacy-policy.html">Privacybeleid</a> &middot; <a href="/over-ons.html">Over ons</a></p>
+            <p>Bron lonen: CBS StatLine 86355NED &middot; Netto-berekening: Belastingdienst-parameters 2026 &middot; Hulpmiddel, geen fiscaal advies.</p>
+        </footer>
+    </div>
+
+    <script src="/beroepen-data.js"></script>
+    <script>
+    (function() {
+        'use strict';
+        var D = BEROEPEN.beroepen;
+        var UPM = BEROEPEN.uur_per_maand;
+
+        var mode = 'netto';           // netto | bruto
+        var sortKey = 'medn';
+        var sortDir = -1;
+        var hgFilter = '';
+        var q = '';
+        var openSel = -1;
+
+        var tbody = document.getElementById('tbody');
+        var searchEl = document.getElementById('search');
+        var pop = document.getElementById('poplist');
+        var clearEl = document.getElementById('search-clear');
+        var hgEl = document.getElementById('hg-filter');
+        var sortEl = document.getElementById('sort-filter');
+        var tellerEl = document.getElementById('teller');
+
+        var HGS = [];
+        D.forEach(function(b) { if (HGS.indexOf(b.hg) < 0) HGS.push(b.hg); });
+        HGS.sort();
+        HGS.forEach(function(h) {
+            var o = document.createElement('option');
+            o.value = h; o.textContent = h;
+            hgEl.appendChild(o);
+        });
+
+        // Stat strip
+        var totN = 0;
+        D.forEach(function(b) { totN += b.werknemers; });
+        var medianen = D.map(function(b){ return b.medn; }).sort(function(a,b){return a-b;});
+        var medAlle = medianen[Math.floor(medianen.length/2)];
+        document.getElementById('stat-strip').innerHTML =
+            stat(D.length + ' beroepen', 'vergeleken op deze pagina') +
+            stat(fmt(medAlle), 'netto mediaan per maand (gemiddeld beroep)') +
+            stat(fmt(D[0].medn), 'hoogste netto mediaan: ' + esc(D[0].naam.replace(/^\d+ /, ''))) +
+            stat(fmt(D[D.length-1].medn), 'laagste netto mediaan: ' + esc(D[D.length-1].naam.replace(/^\d+ /, ''))) +
+            stat(miljoen(totN * 1000), 'werknemers in de dataset');
+        function stat(v, l) { return '<div class="stat"><div class="v">' + v + '</div><div class="l">' + l + '</div></div>'; }
+
+        function miljoen(n) { return n >= 1000000 ? (n/1000000).toFixed(1) + ' mln' : (n/1000).toFixed(0) + 'k'; }
+        function b2m(u) { return Math.round(u * UPM); }
+        function fmt(n) { return '&euro; ' + Number(n).toLocaleString('nl-NL'); }
+        function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+        // naam zonder code-nummer, voor zoek/vergelijk
+        function clean(naam) { return naam.replace(/^\d+ /, ''); }
+        function norm(s) { return s.toLowerCase(); }
+
+        function matches(b) {
+            if (hgFilter && b.hg !== hgFilter) return false;
+            if (!q) return true;
+            var n = norm(b.naam);
+            var parts = q.split(/\s+/);
+            for (var i = 0; i < parts.length; i++) {
+                if (n.indexOf(parts[i]) < 0) return false;
+            }
+            return true;
+        }
+
+        function sortList(list) {
+            list.sort(function(a, b) {
+                var r = 0;
+                if (sortKey === 'naam') r = clean(a.naam).localeCompare(clean(b.naam), 'nl');
+                else if (sortKey === 'werknemers') r = a.werknemers - b.werknemers;
+                else if (sortKey === 'medn') r = a.medn - b.medn;
+                return r * sortDir;
+            });
+            return list;
+        }
+
+        // schaal voor de banden: max p75 over alle zichtbare rijen (stabiel: over alle beroepen)
+        var MAX75 = 0;
+        D.forEach(function(b) { if (b.p75 > MAX75) MAX75 = b.p75; });
+        var SCALE = Math.ceil(MAX75 * 1.05);
+
+        function band(b) {
+            var l = b.p25 / SCALE * 100;
+            var w = (b.p75 - b.p25) / SCALE * 100;
+            var m = b.med / SCALE * 100;
+            return '<div class="band"><div class="fill" style="left:' + l.toFixed(1) + '%;width:' + w.toFixed(1) + '%"></div>' +
+                   '<div class="med" style="left:' + m.toFixed(1) + '%"></div></div>' +
+                   '<div class="bandlabels"><span>' + b2m(b.p25) + '</span><span>' + b2m(b.med) + '</span><span>' + b2m(b.p75) + '</span></div>';
+        }
+
+        function srcPill(b) {
+            if (b.niveau === 'beroep' && b.jaar === 2025) return '<span class="src-pill">CBS 2025</span>';
+            if (b.niveau === 'beroep') return '<span class="src-pill old">CBS 2024</span>';
+            return '<span class="src-pill ' + (b.jaar === 2024 ? 'old' : '') + '">CBS ' + b.jaar + ' &middot; groep</span>';
+        }
+
+        function row(b) {
+            var medVal = mode === 'netto' ? b.medn : b2m(b.med);
+            return '<tr class="beroep-row" data-id="' + esc(b.naam) + '">' +
+                '<td class="bnm">' + esc(clean(b.naam)) + '<span class="sub">' + esc(b.hg) + '</span></td>' +
+                '<td class="bandcell">' + band(b) + '</td>' +
+                '<td class="money">&euro; ' + Number(medVal).toLocaleString('nl-NL') + '<small>' +
+                    (mode === 'netto' ? 'netto / maand' : 'bruto / maand') + '</small></td>' +
+                '<td class="money">' + b.werknemers + 'k</td>' +
+                '<td>' + srcPill(b) + '</td></tr>';
+        }
+
+        function render() {
+            var list = D.filter(matches);
+            sortList(list);
+            tellerEl.textContent = list.length + ' van ' + D.length + ' beroepen' +
+                (hgFilter ? ' \u00b7 sector: ' + hgFilter : '') + (q ? ' \u00b7 zoek: "' + q + '"' : '');
+            if (!list.length) {
+                tbody.innerHTML = '<tr><td colspan="5" style="padding:30px;text-align:center;color:var(--text-light)">Geen beroepen gevonden. Probeer een andere zoekterm.</td></tr>';
+                return;
+            }
+            var html = '';
+            var lastHg = '';
+            list.forEach(function(b) {
+                if (sortKey === 'medn' && sortDir === -1 && b.hg !== lastHg) {
+                    html += '<tr class="hg-head"><td colspan="5">' + esc(b.hg) + '</td></tr>';
+                    lastHg = b.hg;
+                }
+                html += row(b);
+            });
+            tbody.innerHTML = html;
+        }
+
+        // --- autocomplete poplist ---
+        function renderPop() {
+            var list = D.filter(function(b) { return norm(b.naam).indexOf(q) >= 0; });
+            if (sortKey) {}
+            list.sort(function(a, b) { return b.medn - a.medn; });
+            if (!q) { pop.classList.remove('open'); return; }
+            if (!list.length) {
+                pop.innerHTML = '<div class="poplist-empty">Geen beroep gevonden voor &quot;' + esc(q) + '&quot;</div>';
+                pop.classList.add('open'); openSel = -1;
+                return;
+            }
+            var html = '';
+            list.slice(0, 10).forEach(function(b) {
+                var idx = norm(b.naam).indexOf(q);
+                var disp = clean(b.naam);
+                var nm = esc(disp);
+                if (idx >= 0) {
+                    nm = esc(disp.slice(0, idx)) + '<b>' + esc(disp.slice(idx, idx + q.length)) + '</b>' + esc(disp.slice(idx + q.length));
+                }
+                html += '<div class="poplist-item" data-id="' + D.indexOf(b) + '"><span class="nm">' + nm + '</span>' +
+                        '<span class="amt">' + fmt(b2m(b.med)) + ' bruto/m</span></div>';
+            });
+            pop.innerHTML = html;
+            pop.classList.add('open');
+            openSel = -1;
+        }
+
+        searchEl.addEventListener('input', function() {
+            q = norm(searchEl.value.trim());
+            clearEl.style.display = searchEl.value ? 'block' : 'none';
+            if (q) renderPop(); else pop.classList.remove('open');
+            render();
+        });
+        searchEl.addEventListener('focus', function() { if (q) renderPop(); });
+        searchEl.addEventListener('keydown', function(e) {
+            var items = pop.querySelectorAll('.poplist-item');
+            if (e.key === 'ArrowDown') { e.preventDefault(); openSel = Math.min(openSel + 1, items.length - 1); mark(items); }
+            else if (e.key === 'ArrowUp') { e.preventDefault(); openSel = Math.max(openSel - 1, 0); mark(items); }
+            else if (e.key === 'Enter') { e.preventDefault(); if (openSel >= 0 && items[openSel]) items[openSel].click(); else if (q) { pop.classList.remove('open'); searchEl.blur(); } }
+            else if (e.key === 'Escape') { pop.classList.remove('open'); }
+        });
+        function mark(items) {
+            items.forEach(function(el) { el.classList.toggle('sel', el === items[openSel]); });
+            if (items[openSel]) items[openSel].scrollIntoView({ block: 'nearest' });
+        }
+        pop.addEventListener('click', function(e) {
+            var it = e.target.closest('.poplist-item');
+            if (!it) return;
+            var b = D[+it.getAttribute('data-id')];
+            selectRow(b);
+        });
+        function selectRow(b) {
+            q = ''; searchEl.value = b.naam.replace(/^\d+ /, '');
+            clearEl.style.display = 'block';
+            pop.classList.remove('open');
+            hgFilter = b.hg; hgEl.value = b.hg;
+            render();
+            var tr = tbody.querySelector('tr[data-id="' + cssEsc(b.naam) + '"]');
+            if (tr) {
+                tr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                tr.style.transition = 'background .4s';
+                tr.style.background = '#dbeafe';
+                setTimeout(function() { tr.style.background = ''; }, 1800);
+            }
+            searchEl.blur();
+        }
+        function cssEsc(s) { return s.replace(/"/g, '\\"'); }
+        clearEl.addEventListener('click', function() {
+            searchEl.value = ''; q = ''; clearEl.style.display = 'none';
+            pop.classList.remove('open'); render(); searchEl.focus();
+        });
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-wrap')) pop.classList.remove('open');
+        });
+
+        hgEl.addEventListener('change', function() { hgFilter = hgEl.value; render(); });
+        sortEl.addEventListener('change', function() {
+            var v = sortEl.value;
+            if (v === 'medn-asc') { sortKey = 'medn'; sortDir = 1; }
+            else { sortKey = v; sortDir = v === 'naam' ? 1 : -1; }
+            render();
+        });
+        document.getElementById('btn-bruto').addEventListener('click', function() {
+            mode = mode === 'netto' ? 'bruto' : 'netto';
+            this.textContent = mode === 'netto' ? 'Bruto ⇄ Netto' : 'Netto ⇄ Bruto';
+            render();
+        });
+        document.querySelectorAll('table.ber th[data-k]').forEach(function(th) {
+            th.addEventListener('click', function() {
+                var k = th.getAttribute('data-k');
+                if (sortKey === k && k === 'medn') sortDir = -sortDir;
+                else if (sortKey === k && k === 'werknemers') sortDir = -sortDir;
+                else if (k === 'naam') { sortKey = 'naam'; sortDir = 1; }
+                else { sortKey = k === 'medn' ? 'medn' : 'werknemers'; sortDir = -1; }
+                var dir = sortDir === -1 ? ' \u2193' : ' \u2191';
+                document.querySelectorAll('table.ber th').forEach(function(o) { if (o !== th) o.textContent = o.textContent.replace(/ \u2193| \u2191/, ''); });
+                if (!/[\u2193\u2191]$/.test(th.textContent)) th.textContent += dir;
+                render();
+            });
+        });
+
+        // --- Top-kaarten ---
+        var byMedn = D.slice().sort(function(a, b) { return b.medn - a.medn; });
+        function topHtml(list) {
+            return list.map(function(b, i) {
+                return '<li>' + i + '. ' + esc(clean(b.naam)) + '<span class="amt">&euro; ' + Number(b.medn).toLocaleString('nl-NL') + '</span></li>';
+            }).join('');
+        }
+        document.getElementById('top-grid').innerHTML =
+            '<div class="top-card"><h3>&#128200; Top 10 hoogste netto mediaan</h3><ol>' + topHtml(byMedn.slice(0, 10)) + '</ol></div>' +
+            '<div class="top-card laag"><h3>&#128201; Top 10 laagste netto mediaan</h3><ol>' + topHtml(byMedn.slice(-10).reverse()) + '</ol></div>' +
+            '<div class="top-card"><h3>&#128101; Meest beoefende beroepen</h3><ol>' + topHtml(D.slice().sort(function(a, b) { return b.werknemers - a.werknemers; }).slice(0, 10)) + '</ol></div>';
+
+        // --- Waar sta jij? ---
+        document.getElementById('wsj-go').addEventListener('click', function() {
+            var v = parseFloat(document.getElementById('wsj-bruto').value);
+            if (!v || v <= 0) return;
+            var boven = D.filter(function(b) { return b.medn < v; }).length;
+            var pct = Math.round(boven / D.length * 100);
+            var lijst = byMedn.filter(function(b) { return b.medn > v; });
+            var omhoog = lijst.slice(-6).reverse();
+            var omlaag = byMedn.filter(function(b) { return b.medn <= v; }).slice(0, 4);
+            var html = '<div class="wsj-big">Je verdient meer dan <b>' + pct + '%</b> van de beroepen op deze pagina.</div>' +
+                '<div class="wsj-bar"><div class="pos" style="left:' + pct + '%"></div></div>' +
+                '<div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--text-light)"><span>laagste</span><span>hoogste</span></div>';
+            if (omhoog.length) {
+                html += '<p style="margin:10px 0 4px;font-weight:600;font-size:.9rem">Beroepen waar je net boven zit:</p><ul class="wsj-list">' +
+                    omhoog.map(function(b) { return '<li>' + esc(clean(b.naam)) + ' &mdash; &euro; ' + Number(b.medn).toLocaleString('nl-NL') + ' netto</li>'; }).join('') + '</ul>';
+            }
+            if (omlaag.length) {
+                html += '<p style="margin:10px 0 4px;font-weight:600;font-size:.9rem">Je zit zelf nog onder:</p><ul class="wsj-list">' +
+                    omlaag.map(function(b) { return '<li>' + esc(clean(b.naam)) + ' &mdash; &euro; ' + Number(b.medn).toLocaleString('nl-NL') + ' netto</li>'; }).join('') + '</ul>';
+            }
+            document.getElementById('wsj-result').innerHTML = html;
+            document.getElementById('wsj-radar').innerHTML = html2radar(v);
+        });
+        function html2radar(v) {
+            var boven = D.filter(function(b) { return b.medn < v; }).length;
+            var pct = Math.round(boven / D.length * 100);
+            var start = Math.max(0, boven - 3);
+            var w = D.slice().sort(function(a, b) { return a.medn - b.medn; }).slice(start, start + 7);
+            var rows = w.map(function(b) {
+                return '<tr><td style="padding:6px 8px;border-bottom:1px solid #f1f5f9;font-size:.88rem">' + esc(clean(b.naam)) + '</td>' +
+                       '<td style="padding:6px 8px;border-bottom:1px solid #f1f5f9;text-align:right;font-variant-numeric:tabular-nums;font-size:.88rem">&euro; ' + Number(b.medn).toLocaleString('nl-NL') + '</td></tr>';
+            }).join('');
+            return '<table style="width:100%;border-collapse:collapse">' + rows + '</table>' +
+                   '<p class="wsj-hint">Beroepen rond jouw salarisniveau (netto mediaan per maand).</p>';
+        }
+        document.getElementById('wsj-bruto').addEventListener('keydown', function(e) { if (e.key === 'Enter') document.getElementById('wsj-go').click(); });
+
+        render();
+    })();
+    </script>
+</body>
+</html>

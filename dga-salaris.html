@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>DGA Salaris Calculator 2026 | Gebruikelijk Loon Berekenen</title>
+    <meta name="description" content="Bereken het gebruikelijk loon voor de DGA van een BV in 2026 volgens de gebruikelijkloonregeling van de Belastingdienst (minimaal €58.000). Inclusief loonheffing, Zvw-werkgeversheffing, vennootschapsbelasting en box 2 dividend.">
+    <meta name="keywords" content="dga salaris 2026, gebruikelijk loon 2026, gebruikelijkloonregeling, dga loon berekenen, salaris directeur grootaandeelhouder, dividend of salaris, box 2 2026, vennootschapsbelasting 2026">
+    <meta name="author" content="salaris.hodc.nl">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://salaris.hodc.nl/dga-salaris.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salaris.hodc.nl/dga-salaris.html">
+    <meta property="og:title" content="DGA Salaris Calculator 2026 - Gebruikelijk Loon">
+    <meta property="og:description" content="Bereken het gebruikelijk loon van de DGA volgens de Belastingdienst, plus netto salaris, Vpb en box 2 dividend.">
+    <meta property="og:site_name" content="Salaris Calculator Nederland">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "DGA Salaris Calculator 2026",
+      "url": "https://salaris.hodc.nl/dga-salaris.html",
+      "description": "Bereken het gebruikelijk loon van de directeur-grootaandeelhouder (DGA) volgens de gebruikelijkloonregeling 2026, met loonheffing, Zvw, vennootschapsbelasting en box 2.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "nl-NL",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "name": "salaris.hodc.nl" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wat is het gebruikelijk loon voor een DGA in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Het gebruikelijk loon in 2026 is het hoogste van: het loon uit de meest vergelijkbare dienstbetrekking, het loon van de best betaalde werknemer in de BV of verbonden lichamen, en €58.000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mag een DGA minder dan €58.000 verdienen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alleen als de DGA aannemelijk maakt dat het loon in de meest vergelijkbare dienstbetrekking lager is, of als de BV een innovatieve startup met S&O-verklaring is (maximaal 3 jaar minimumloon). Is het gebruikelijk loon niet hoger dan €5.000, dan hoeft er geen loon te worden vastgesteld."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Betaalt een DGA premies werknemersverzekeringen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Een DGA die niet tegen zijn of haar wil kan worden ontslagen is meestal niet verzekerd voor de werknemersverzekeringen (WW, WIA, ZW). Over het loon worden wel loonbelasting en premies volksverzekeringen ingehouden. Voor een niet-verzekerde DGA houdt de BV daarnaast 4,85% bijdrage Zvw in op het loon; er is dan geen werkgeversheffing Zvw."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-light: #3b82f6;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --success: #16a34a;
+            --green-bg: #f0fdf4;
+            --green-border: #bbf7d0;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --danger: #dc2626;
+            --danger-bg: #fef2f2;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container { max-width: 700px; margin: 0 auto; }
+        nav {
+            display: flex; gap: 20px; justify-content: center;
+            padding: 12px 0; margin-bottom: 10px; flex-wrap: wrap;
+        }
+        nav a { color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { text-decoration: underline; }
+        .header { text-align: center; margin-bottom: 20px; padding: 20px 0; }
+        .header h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 6px; }
+        .header p { color: var(--text-light); font-size: 0.95rem; }
+        .intro-text { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.7; }
+        .card {
+            background: var(--card-bg); border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 20px;
+        }
+        .card h2 { font-size: 1.15rem; color: var(--primary); margin-bottom: 4px; }
+        .card .step { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+        .input-group { display: flex; gap: 12px; align-items: flex-end; margin-bottom: 14px; }
+        .field { flex: 1; min-width: 0; }
+        .field label { display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-weight: 500; }
+        .field .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 4px; }
+        .field input, .field select {
+            width: 100%; padding: 12px 14px; border: 2px solid var(--border);
+            border-radius: 8px; font-size: 1.05rem; font-weight: 600;
+            background: var(--bg); transition: border-color 0.2s;
+        }
+        .field input:focus, .field select:focus { outline: none; border-color: var(--primary); }
+        .field input:disabled { color: var(--text-light); }
+        .euro-prefix { position: relative; }
+        .euro-prefix input { padding-left: 32px; }
+        .euro-prefix::before {
+            content: '\20AC'; position: absolute; left: 12px; top: 38px;
+            font-weight: 600; color: var(--text-light); font-size: 1.05rem;
+        }
+        .check { display: flex; gap: 8px; align-items: center; font-size: 0.9rem; color: var(--text); margin-bottom: 10px; }
+        .check input { width: 18px; height: 18px; }
+        .notice {
+            margin-top: 12px; padding: 12px 16px; border-radius: 8px;
+            font-size: 0.88rem; line-height: 1.55;
+        }
+        .notice.ok { background: var(--green-bg); border: 1px solid var(--green-border); color: #15803d; }
+        .notice.warn { background: var(--warning-bg); border: 1px solid #fde68a; color: #92400e; }
+        .notice.bad { background: var(--danger-bg); border: 1px solid #fecaca; color: #991b1b; }
+        .notice.info { background: #f0f9ff; border: 1px solid #bfdbfe; color: #1e40af; }
+        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+        .result-box { background: var(--bg); border-radius: 10px; padding: 16px; text-align: center; }
+        .result-box.netto { background: var(--green-bg); border: 2px solid var(--green-border); }
+        .result-box .label { font-size: 0.82rem; color: var(--text-light); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .result-box .amount { font-size: 1.5rem; font-weight: 700; }
+        .result-box.netto .amount { color: var(--success); font-size: 1.8rem; }
+        .breakdown { margin-top: 20px; }
+        .breakdown h3 { font-size: 0.9rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .breakdown-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .breakdown-row:last-child { border-bottom: none; }
+        .breakdown-row .desc { color: var(--text-light); }
+        .breakdown-row .val { font-weight: 600; white-space: nowrap; }
+        .breakdown-row.total { padding-top: 12px; margin-top: 4px; border-top: 2px solid var(--primary); font-size: 1.02rem; }
+        .breakdown-row.total .desc { color: var(--text); font-weight: 700; }
+        .breakdown-row.total .val { color: var(--primary); }
+        .breakdown-row.chosen .desc { color: var(--text); font-weight: 700; }
+        .negative { color: var(--success); }
+        table.compare { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
+        table.compare th { text-align: right; padding: 8px 10px; background: var(--bg); color: var(--text-light); font-weight: 600; border-bottom: 2px solid var(--border); }
+        table.compare th:first-child, table.compare td:first-child { text-align: left; }
+        table.compare td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+        table.compare td:first-child { white-space: normal; color: var(--text-light); }
+        table.compare tr.total td { font-weight: 700; border-top: 2px solid var(--primary); color: var(--text); }
+        .table-scroll { overflow-x: auto; }
+        .aangifte-btn {
+            display: inline-block; margin-top: 14px; background: var(--primary); color: white;
+            padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+        }
+        .aangifte-btn:hover { background: #1549b8; }
+        .toggle-params { background: none; border: none; color: var(--primary); cursor: pointer; font-size: 0.85rem; padding: 4px 0; margin-top: 10px; }
+        .toggle-params:hover { text-decoration: underline; }
+        .params-detail { display: none; margin-top: 10px; font-size: 0.8rem; color: var(--text-light); line-height: 1.7; }
+        .params-detail.visible { display: block; }
+        .content-section {
+            background: var(--card-bg); border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 20px;
+        }
+        .content-section h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
+        .content-section h3 { font-size: 1.05rem; color: var(--text); margin-top: 18px; margin-bottom: 6px; }
+        .content-section p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 10px; }
+        .content-section ul { list-style: none; padding: 0; margin-bottom: 10px; }
+        .content-section ul li { font-size: 0.92rem; color: var(--text-light); padding: 6px 0; padding-left: 24px; position: relative; }
+        .content-section ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--primary); font-weight: 600; }
+        .faq-item { margin-bottom: 16px; }
+        .faq-item h3 { font-size: 1rem; color: var(--text); margin-bottom: 4px; }
+        .faq-item p { font-size: 0.9rem; color: var(--text-light); }
+        footer { text-align: center; padding: 20px 0; color: var(--text-light); font-size: 0.82rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 500px) {
+            body { padding: 16px; }
+            .card, .content-section { padding: 20px; }
+            .input-group { flex-direction: column; align-items: stretch; }
+            .result-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.4rem; }
+        }
+    </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6426090550720509"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Calculator</a>
+            <a href="/dga-salaris.html">DGA salaris</a>
+            <a href="/dga-loonaangifte.html">DGA loonaangifte</a>
+            <a href="/salaris-per-beroep.html">Salaris per beroep</a>
+            <a href="/belasting-schijven-2026.html">Belasting schijven</a>
+            <a href="/hoe-bereken-je-netto-salaris.html">Hoe bereken je netto?</a>
+            <a href="/faq.html">Veelgestelde vragen</a>
+            <a href="/over-ons.html">Over ons</a>
+        </nav>
+
+        <div class="header">
+            <h1>DGA Salaris Calculator 2026</h1>
+            <p>Gebruikelijkloonregeling &middot; Loonheffing &middot; Vpb &middot; Box 2 dividend</p>
+        </div>
+
+        <p class="intro-text">
+            Ben je directeur-grootaandeelhouder (DGA) van een BV? Dan moet de BV je een
+            <strong>gebruikelijk loon</strong> betalen. Deze calculator stelt dat loon vast zoals de
+            Belastingdienst het toetst (artikel 12a Wet op de loonbelasting 1964), berekent de
+            loonheffing en de werkgeverslasten, en laat zien wat er overblijft voor
+            vennootschapsbelasting en dividend in box 2.
+        </p>
+
+        <!-- Stap 1: gebruikelijk loon -->
+        <div class="card">
+            <h2>1. Gebruikelijk loon vaststellen</h2>
+            <p class="step">De Belastingdienst neemt het hoogste van drie bedragen.</p>
+
+            <div class="input-group">
+                <div class="field euro-prefix">
+                    <label for="vergelijkbaar">Loon meest vergelijkbare dienstbetrekking</label>
+                    <input type="number" id="vergelijkbaar" value="0" min="0" step="1000">
+                    <div class="hint">Jaarloon van een werknemer zonder aandelen met een vergelijkbare functie</div>
+                </div>
+                <div class="field euro-prefix">
+                    <label for="hoogsteWerknemer">Hoogste loon andere werknemer</label>
+                    <input type="number" id="hoogsteWerknemer" value="0" min="0" step="1000">
+                    <div class="hint">In de BV of verbonden lichamen (0 als er geen personeel is)</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="field">
+                    <label for="situatie">Situatie</label>
+                    <select id="situatie">
+                        <option value="standaard" selected>Standaard (minimaal &euro;58.000)</option>
+                        <option value="startup">Innovatieve startup met S&amp;O-verklaring (max. 3 jaar)</option>
+                        <option value="lager">Lager loon aannemelijk gemaakt</option>
+                    </select>
+                </div>
+                <div class="field euro-prefix" id="lagerField" style="display:none;">
+                    <label for="lagerBedrag">Aannemelijk gemaakt loon</label>
+                    <input type="number" id="lagerBedrag" value="45000" min="0" step="1000">
+                </div>
+            </div>
+
+            <div id="glRows" class="breakdown"></div>
+            <div id="glNotice" class="notice info"></div>
+        </div>
+
+        <!-- Stap 2: werkelijk loon -->
+        <div class="card">
+            <h2>2. Loon dat de BV betaalt</h2>
+            <p class="step">Standaard gelijk aan het gebruikelijk loon. Je mag ook meer uitkeren.</p>
+
+            <label class="check"><input type="checkbox" id="volgGl" checked> Gelijk aan gebruikelijk loon</label>
+            <div class="input-group">
+                <div class="field euro-prefix">
+                    <label for="loonGeld">Bruto loon in geld per jaar</label>
+                    <input type="number" id="loonGeld" value="58000" min="0" step="1000" disabled>
+                </div>
+                <div class="field euro-prefix">
+                    <label for="natura">Loon in natura per jaar</label>
+                    <input type="number" id="natura" value="0" min="0" step="500">
+                    <div class="hint">Bijv. bijtelling auto van de zaak. Telt mee voor het gebruikelijk loon.</div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="field">
+                    <label for="aow">AOW-leeftijd bereikt?</label>
+                    <select id="aow">
+                        <option value="nee" selected>Nee</option>
+                        <option value="ja">Ja</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="verzekerd">Verzekerd voor werknemersverzekeringen?</label>
+                    <select id="verzekerd">
+                        <option value="nee" selected>Nee (DGA niet ontslagbaar)</option>
+                        <option value="ja">Ja (bijv. minderheidsaandeelhouder)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="toetsNotice" class="notice"></div>
+        </div>
+
+        <!-- Stap 3: winst BV -->
+        <div class="card">
+            <h2>3. Winst van de BV (optioneel)</h2>
+            <p class="step">Voor de berekening van vennootschapsbelasting en dividend.</p>
+            <div class="input-group">
+                <div class="field euro-prefix">
+                    <label for="winst">Winst v&oacute;&oacute;r DGA-loon</label>
+                    <input type="number" id="winst" value="120000" min="0" step="5000">
+                </div>
+                <div class="field">
+                    <label for="uitkering">Uitkeren als dividend</label>
+                    <select id="uitkering">
+                        <option value="1" selected>100% van de winst na Vpb</option>
+                        <option value="0.5">50%</option>
+                        <option value="0">Niets (winst blijft in BV)</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="partner">Fiscale partner in box 2?</label>
+                    <select id="partner">
+                        <option value="nee" selected>Nee</option>
+                        <option value="ja">Ja (dubbele schijfgrens)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultaten -->
+        <div class="card" id="results">
+            <div class="result-grid">
+                <div class="result-box netto">
+                    <div class="label">Netto in privé per jaar</div>
+                    <div class="amount" id="r-totaal">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Netto salaris per maand</div>
+                    <div class="amount" id="r-netto-maand">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Totale belastingdruk</div>
+                    <div class="amount" id="r-druk">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Loonkosten BV</div>
+                    <div class="amount" id="r-loonkosten">-</div>
+                </div>
+            </div>
+
+            <div class="breakdown">
+                <h3>Salaris (box 1)</h3>
+                <div id="salarisRows"></div>
+                <a id="aangifteLink" class="aangifte-btn" href="/dga-loonaangifte.html">Maak de loonaangifte per maand voor dit loon &rarr;</a>
+            </div>
+            <div class="breakdown">
+                <h3>BV en dividend (box 2)</h3>
+                <div id="bvRows"></div>
+            </div>
+
+            <div class="breakdown">
+                <h3>Vergelijking: gebruikelijk loon vs. alles als salaris</h3>
+                <div class="table-scroll">
+                    <table class="compare" id="compare"></table>
+                </div>
+                <p id="compareNote" style="font-size:0.82rem;color:var(--text-light);margin-top:8px;"></p>
+            </div>
+
+            <button class="toggle-params" onclick="toggleParams()">
+                &#9660; Toon/verberg parameters 2026
+            </button>
+            <div class="params-detail" id="params-detail">
+                <strong>Gebruikelijk loon (art. 12a Wet LB 1964)</strong><br>
+                Hoogste van: meest vergelijkbare dienstbetrekking (100%), hoogste loon werknemer in BV/verbonden lichamen, &euro;58.000<br>
+                Geen loon vereist als gebruikelijk loon &le; &euro;5.000<br>
+                Innovatieve startup (S&amp;O-verklaring als starter): minimumloon, max. 3 jaar (indicatie &euro;14,71 &times; 40 u &times; 52 = &euro;30.597)<br>
+                <br>
+                <strong>Loonheffing</strong><br>
+                Witte en groene tabel als op de <a href="/">bruto-netto calculator</a>, inclusief algemene heffingskorting en arbeidskorting<br>
+                Zvw, niet verzekerde DGA (inkomenscode 17): ingehouden bijdrage 4,85% over max. &euro;79.409, geen werkgeversheffing<br>
+                Zvw, verzekerde DGA (inkomenscode 13): werkgeversheffing 6,10% over max. &euro;79.409 (betaald door de BV)<br>
+                Werknemersverzekeringen (alleen indien verzekerd): WW en WIA/Aof, hier indicatief 10,34% over max. &euro;79.409<br>
+                <br>
+                <strong>Vennootschapsbelasting</strong><br>
+                19% tot &euro;200.000, 25,8% daarboven<br>
+                <br>
+                <strong>Box 2 (aanmerkelijk belang)</strong><br>
+                24,5% tot &euro;68.843 per persoon (&euro;137.686 met fiscale partner), 31% daarboven<br>
+                <br>
+                Bronnen: Belastingdienst, Handboek Loonheffingen 2026 en Belastingplan 2026
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Hoe bepaalt de Belastingdienst het DGA-salaris?</h2>
+            <p>
+                Een DGA heeft een aanmerkelijk belang: minimaal 5% van de aandelen in de BV. Omdat de
+                DGA zelf zijn loon kan bepalen, schrijft de gebruikelijkloonregeling voor dat er een
+                marktconform loon wordt betaald. Zo kan winst niet onbelast in de BV blijven of
+                tegen het lagere box 2-tarief worden uitgekeerd. Het gebruikelijk loon is in 2026
+                het <strong>hoogste</strong> van deze drie bedragen:
+            </p>
+            <ul>
+                <li>100% van het loon uit de meest vergelijkbare dienstbetrekking</li>
+                <li>het loon van de werknemer die het meeste verdient binnen de BV of verbonden lichamen</li>
+                <li>&euro;58.000 (2025: &euro;56.000)</li>
+            </ul>
+            <h3>Wanneer mag het lager?</h3>
+            <p>
+                De DGA moet zelf aannemelijk maken dat het loon in de meest vergelijkbare
+                dienstbetrekking lager is dan &euro;58.000, bijvoorbeeld bij deeltijd of een
+                eenvoudige functie. Ook een verliesgevende BV of een tekort aan liquide middelen
+                kan een argument zijn. Innovatieve startups met een S&amp;O-verklaring waarin de
+                BV als starter is aangemerkt, mogen maximaal 3 jaar het wettelijk minimumloon
+                aanhouden. Is het gebruikelijk loon niet meer dan &euro;5.000 per jaar, dan hoeft er
+                helemaal geen loon te worden vastgesteld.
+            </p>
+            <h3>Wat telt mee?</h3>
+            <p>
+                Niet alleen het loon in geld telt mee, maar ook loon in natura zoals de bijtelling
+                voor een auto van de zaak. Over het loon worden loonbelasting en premies
+                volksverzekeringen ingehouden. Is de DGA niet verzekerd voor de werknemersverzekeringen, dan houdt de BV
+                ook de inkomensafhankelijke bijdrage Zvw van 4,85% in op het loon. Voor een verzekerde DGA betaalt de BV
+                in plaats daarvan 6,10% werkgeversheffing Zvw.
+                Een DGA die niet tegen zijn of haar wil kan worden ontslagen, is meestal niet
+                verzekerd voor de werknemersverzekeringen (WW, WIA, ZW).
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Veelgestelde vragen</h2>
+            <div class="faq-item">
+                <h3>Is salaris of dividend voordeliger?</h3>
+                <p>
+                    Boven het gebruikelijk loon is dividend meestal voordeliger dan extra salaris,
+                    omdat de combinatie van 19% Vpb en 24,5% box 2 lager uitkomt dan het
+                    toptarief van 49,50% in box 1. Daar staat tegenover dat salaris pensioen- en
+                    arbeidskorting oplevert en dat dividend alleen kan als de BV voldoende
+                    reserves heeft. De vergelijkingstabel in de calculator laat het verschil zien.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Wat gebeurt er als ik te weinig loon opneem?</h3>
+                <p>
+                    De Belastingdienst kan bij een boekenonderzoek het loon corrigeren naar het
+                    gebruikelijk loon en de loonheffing naheffen, eventueel met een boete en
+                    rente.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Hoe nauwkeurig is deze berekening?</h3>
+                <p>
+                    De calculator rekent met jaarbedragen en de tarieven voor 2026. De
+                    loonheffing is een voorheffing; de definitieve inkomstenbelasting kan
+                    afwijken door bijvoorbeeld een eigen woning, aftrekposten of een fiscale
+                    partner. Laat je situatie altijd controleren door een adviseur.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 salaris.hodc.nl &middot; <a href="/privacy-policy.html">Privacybeleid</a> &middot; <a href="/over-ons.html">Over ons</a></p>
+            <p>Deze calculator is een hulpmiddel en geen fiscaal advies.</p>
+        </footer>
+    </div>
+
+    <script>
+    // Tabellen loonheffing 2026 (zelfde parameters als de bruto-netto calculator)
+    const WIT = {
+        a2: 38883, a3: 78426, b1: 0.3575, b2: 0.3756, b3: 0.4950, c2: 13900, c3: 28752,
+        AHK_MAX: 3115, AHK_G1: 29736, AHK_G2: 78426, AHK_RATE: 0.06398,
+        ARK_G1: 11965, ARK_G2: 25845, ARK_G3: 45592, ARK_G4: 132920,
+        ARK_R1: 0.08324, ARK_R2: 0.31009, ARK_R3: 0.01950, ARK_RATE_OUT: 0.06510,
+        OUK_MAX: 0, OUK_G1: 0, OUK_RATE: 0, OUK_G2: 0
+    };
+    const GROEN = {
+        a2: 38883, a3: 78426, b1: 0.1785, b2: 0.3756, b3: 0.4950, c2: 6940, c3: 21792,
+        AHK_MAX: 1556, AHK_G1: 29736, AHK_G2: 78426, AHK_RATE: 0.03195,
+        ARK_G1: 11965, ARK_G2: 25845, ARK_G3: 45592, ARK_G4: 132920,
+        ARK_R1: 0.04156, ARK_R2: 0.15483, ARK_R3: 0.00974, ARK_RATE_OUT: 0.03250,
+        OUK_MAX: 2067, OUK_G1: 46002, OUK_G2: 59782, OUK_RATE: 0.15000
+    };
+
+    // DGA-parameters 2026
+    const GL_NORM = 58000;          // normbedrag gebruikelijk loon
+    const GL_DREMPEL = 5000;        // geen gebruikelijk loon als het niet hoger is dan dit
+    const MINIMUMLOON = 30597;      // indicatie: 14,71 x 40 uur x 52 weken
+    const ZVW_WG_RATE = 0.0610;     // werkgeversheffing Zvw (verzekerde DGA, betaald door BV)
+    const ZVW_ING_RATE = 0.0485;    // ingehouden bijdrage Zvw (niet verzekerde DGA, inkomenscode 17)
+    const ZVW_MAX = 79409;          // maximum bijdrage-inkomen Zvw
+    const WV_RATE = 0.1034;         // werknemersverzekeringen indien verzekerd (WW laag + WIA/Aof, indicatief)
+    const WV_MAX = 79409;           // maximum premieloon
+    const VPB_GRENS = 200000, VPB_LAAG = 0.19, VPB_HOOG = 0.258;
+    const BOX2_GRENS = 68843, BOX2_LAAG = 0.245, BOX2_HOOG = 0.31;
+
+    function calcLoonheffing(L, t) {
+        if (L <= 0) return 0;
+        if (L <= t.a2) return t.b1 * L;
+        if (L <= t.a3) return t.c2 + t.b2 * (L - t.a2);
+        return t.c3 + t.b3 * (L - t.a3);
+    }
+    function calcAhk(L, t) {
+        if (L <= 0) return 0;
+        if (L <= t.AHK_G1) return t.AHK_MAX;
+        if (L <= t.AHK_G2) return Math.max(0, t.AHK_MAX - t.AHK_RATE * (L - t.AHK_G1));
+        return 0;
+    }
+    function calcArk(L, t) {
+        if (L <= 0) return 0;
+        if (L <= t.ARK_G1) return t.ARK_R1 * L;
+        var ark1 = t.ARK_R1 * t.ARK_G1;
+        if (L <= t.ARK_G2) return ark1 + t.ARK_R2 * (L - t.ARK_G1);
+        var ark2 = ark1 + t.ARK_R2 * (t.ARK_G2 - t.ARK_G1);
+        if (L <= t.ARK_G3) return ark2 + t.ARK_R3 * (L - t.ARK_G2);
+        // Boven ARK_G3 wordt de arbeidskorting afgebouwd; bij ARK_G4 is die nul
+        var maxArk = ark2 + t.ARK_R3 * (t.ARK_G3 - t.ARK_G2);
+        if (L >= t.ARK_G4) return 0;
+        return Math.max(0, maxArk - t.ARK_RATE_OUT * (L - t.ARK_G3));
+    }
+    function calcOuk(L, t) {
+        if (t.OUK_MAX === 0 || L <= 0) return 0;
+        if (L <= t.OUK_G1) return t.OUK_MAX;
+        if (L <= t.OUK_G2) return Math.max(0, t.OUK_MAX - t.OUK_RATE * (L - t.OUK_G1));
+        return 0;
+    }
+    function calcVpb(w) {
+        if (w <= 0) return 0;
+        if (w <= VPB_GRENS) return VPB_LAAG * w;
+        return VPB_LAAG * VPB_GRENS + VPB_HOOG * (w - VPB_GRENS);
+    }
+    function calcBox2(d, grens) {
+        if (d <= 0) return 0;
+        if (d <= grens) return BOX2_LAAG * d;
+        return BOX2_LAAG * grens + BOX2_HOOG * (d - grens);
+    }
+
+    function fmt(n) {
+        var s = Math.abs(n).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        return (n < 0 ? '-' : '') + '€' + s;
+    }
+    function num(id) { return Math.max(0, parseFloat(document.getElementById(id).value) || 0); }
+    function row(desc, val, cls) {
+        return '<div class="breakdown-row' + (cls ? ' ' + cls : '') + '"><span class="desc">' + desc +
+            '</span><span class="val">' + val + '</span></div>';
+    }
+
+    // Gebruikelijk loon volgens art. 12a Wet LB 1964
+    function bepaalGebruikelijkLoon() {
+        var situatie = document.getElementById('situatie').value;
+        var vergelijkbaar = num('vergelijkbaar');
+        var hoogste = num('hoogsteWerknemer');
+        if (situatie === 'startup') {
+            return { bedrag: MINIMUMLOON, bron: 'startup', vergelijkbaar: vergelijkbaar, hoogste: hoogste };
+        }
+        if (situatie === 'lager') {
+            return { bedrag: Math.max(num('lagerBedrag'), hoogste), bron: 'lager', vergelijkbaar: vergelijkbaar, hoogste: hoogste };
+        }
+        var bedrag = Math.max(vergelijkbaar, hoogste, GL_NORM);
+        var bron = bedrag === GL_NORM ? 'norm' : (bedrag === vergelijkbaar ? 'vergelijkbaar' : 'werknemer');
+        return { bedrag: bedrag, bron: bron, vergelijkbaar: vergelijkbaar, hoogste: hoogste };
+    }
+
+    // Box 1: loonheffing en loonkosten bij een gegeven loon
+    function berekenSalaris(loonGeld, natura, t, verzekerd) {
+        var loon = loonGeld + natura;
+        var lhBruto = calcLoonheffing(loon, t);
+        var ahk = calcAhk(loon, t), ark = calcArk(loon, t), ouk = calcOuk(loon, t);
+        var lh = Math.max(0, lhBruto - ahk - ark - ouk);
+        // Niet verzekerde DGA: bijdrage Zvw wordt op het loon ingehouden; verzekerde DGA: werkgeversheffing
+        var zvw = (verzekerd ? ZVW_WG_RATE : ZVW_ING_RATE) * Math.min(loon, ZVW_MAX);
+        var wv = verzekerd ? WV_RATE * Math.min(loon, WV_MAX) : 0;
+        return {
+            loon: loon, lhBruto: lhBruto, ahk: ahk, ark: ark, ouk: ouk, lh: lh,
+            zvw: zvw, wv: wv, zvwIngehouden: !verzekerd,
+            netto: loonGeld - lh - (verzekerd ? 0 : zvw),           // loon in natura is geen geld op de rekening
+            loonkosten: loonGeld + (verzekerd ? zvw : 0) + wv       // natura-kosten zitten al in de winst
+        };
+    }
+
+    // BV: Vpb en dividend over de winst na loonkosten
+    function berekenBv(winst, loonkosten, uitkering, box2Grens) {
+        var belastbaar = winst - loonkosten;
+        var vpb = calcVpb(belastbaar);
+        var naVpb = belastbaar - vpb;
+        var dividend = Math.max(0, naVpb) * uitkering;
+        var box2 = calcBox2(dividend, box2Grens);
+        return { belastbaar: belastbaar, vpb: vpb, naVpb: naVpb, dividend: dividend, box2: box2, nettoDiv: dividend - box2 };
+    }
+
+    function calculate() {
+        var situatie = document.getElementById('situatie').value;
+        document.getElementById('lagerField').style.display = situatie === 'lager' ? 'block' : 'none';
+
+        // Stap 1
+        var gl = bepaalGebruikelijkLoon();
+        var glRows = '';
+        if (situatie === 'standaard') {
+            glRows += row('Meest vergelijkbare dienstbetrekking', fmt(gl.vergelijkbaar), gl.bron === 'vergelijkbaar' ? 'chosen' : '');
+            glRows += row('Hoogste loon andere werknemer', fmt(gl.hoogste), gl.bron === 'werknemer' ? 'chosen' : '');
+            glRows += row('Normbedrag 2026', fmt(GL_NORM), gl.bron === 'norm' ? 'chosen' : '');
+        } else if (situatie === 'startup') {
+            glRows += row('Wettelijk minimumloon (indicatie, 40 u/week)', fmt(MINIMUMLOON));
+        } else {
+            glRows += row('Aannemelijk gemaakt loon', fmt(num('lagerBedrag')));
+            if (gl.hoogste > num('lagerBedrag')) glRows += row('Hoogste loon andere werknemer', fmt(gl.hoogste), 'chosen');
+        }
+        var glNul = gl.bedrag <= GL_DREMPEL;
+        glRows += row('Gebruikelijk loon', glNul ? fmt(0) : fmt(gl.bedrag), 'total');
+        document.getElementById('glRows').innerHTML = glRows;
+
+        var glNotice = document.getElementById('glNotice');
+        if (glNul) {
+            glNotice.className = 'notice info';
+            glNotice.innerHTML = 'Het gebruikelijk loon is niet hoger dan &euro;5.000. Je hoeft dan geen loon vast te stellen.';
+        } else if (situatie === 'startup') {
+            glNotice.className = 'notice warn';
+            glNotice.innerHTML = 'Alleen toegestaan als de BV een S&amp;O-verklaring heeft waarin zij als starter is aangemerkt, en maximaal 3 jaar. Het minimumloon hangt af van je werkweek en stijgt per 1 juli.';
+        } else if (situatie === 'lager') {
+            glNotice.className = 'notice warn';
+            glNotice.innerHTML = 'Je moet zelf aannemelijk maken dat dit loon past bij de meest vergelijkbare dienstbetrekking (bijv. met vacatures, cao-lonen of een deeltijdfunctie). Leg dit vast in je administratie.';
+        } else {
+            glNotice.className = 'notice info';
+            glNotice.innerHTML = 'De Belastingdienst gaat uit van het hoogste bedrag. Lager mag alleen als je aannemelijk maakt dat een vergelijkbare functie minder betaalt.';
+        }
+
+        // Stap 2
+        var volgGl = document.getElementById('volgGl').checked;
+        var natura = num('natura');
+        var glBedrag = glNul ? 0 : gl.bedrag;
+        var loonInput = document.getElementById('loonGeld');
+        loonInput.disabled = volgGl;
+        if (volgGl) loonInput.value = Math.max(0, glBedrag - natura);
+        var loonGeld = num('loonGeld');
+        var totaalLoon = loonGeld + natura;
+
+        var toets = document.getElementById('toetsNotice');
+        if (totaalLoon + 0.5 >= glBedrag) {
+            toets.className = 'notice ok';
+            toets.innerHTML = '&#10003; Totaal loon ' + fmt(totaalLoon) + ' voldoet aan het gebruikelijk loon van ' + fmt(glBedrag) + '.';
+        } else {
+            toets.className = 'notice bad';
+            toets.innerHTML = '&#9888; Totaal loon ' + fmt(totaalLoon) + ' is ' + fmt(glBedrag - totaalLoon) +
+                ' lager dan het gebruikelijk loon. De Belastingdienst kan loonheffing naheffen over het verschil.';
+        }
+
+        var t = document.getElementById('aow').value === 'ja' ? GROEN : WIT;
+        var verzekerd = document.getElementById('verzekerd').value === 'ja';
+        var s = berekenSalaris(loonGeld, natura, t, verzekerd);
+
+        // Stap 3
+        var winst = num('winst');
+        var uitkering = parseFloat(document.getElementById('uitkering').value);
+        var box2Grens = document.getElementById('partner').value === 'ja' ? 2 * BOX2_GRENS : BOX2_GRENS;
+        var bv = berekenBv(winst, s.loonkosten, uitkering, box2Grens);
+
+        var totaalNetto = s.netto + bv.nettoDiv;
+        var totaalBelasting = s.lh + s.zvw + s.wv + Math.max(0, bv.vpb) + bv.box2;
+        var druk = totaalNetto + totaalBelasting > 0 ? totaalBelasting / (totaalNetto + totaalBelasting) * 100 : 0;
+
+        document.getElementById('r-totaal').textContent = fmt(totaalNetto);
+        document.getElementById('r-netto-maand').textContent = fmt(s.netto / 12);
+        document.getElementById('r-druk').textContent = druk.toFixed(1) + '%';
+        document.getElementById('r-loonkosten').textContent = fmt(s.loonkosten);
+
+        var sr = '';
+        sr += row('Bruto loon in geld', fmt(loonGeld));
+        if (natura > 0) sr += row('Loon in natura', fmt(natura));
+        sr += row('Loonheffing (bruto)', fmt(s.lhBruto));
+        sr += row('─ Algemene heffingskorting', '<span class="negative">-' + fmt(s.ahk) + '</span>');
+        sr += row('─ Arbeidskorting', '<span class="negative">-' + fmt(s.ark) + '</span>');
+        if (t === GROEN) sr += row('─ Ouderenkorting', '<span class="negative">-' + fmt(s.ouk) + '</span>');
+        sr += row('Loonheffing (netto)', fmt(s.lh), 'total');
+        if (s.zvwIngehouden) sr += row('Ingehouden bijdrage Zvw (4,85%)', '-' + fmt(s.zvw));
+        sr += row('Netto salaris per jaar', '<span style="color:#16a34a;">' + fmt(s.netto) + '</span>', 'total');
+        if (!s.zvwIngehouden) sr += row('Werkgeversheffing Zvw (6,10%, betaald door BV)', fmt(s.zvw));
+        if (verzekerd) sr += row('Premies werknemersverzekeringen (indicatief)', fmt(s.wv));
+        document.getElementById('salarisRows').innerHTML = sr;
+        var groep = t === GROEN ? 'aow1946' : 'jong';
+        document.getElementById('aangifteLink').href = '/dga-loonaangifte.html?loon=' + Math.round(loonGeld) +
+            '&auto=' + Math.round(natura) + '&groep=' + groep + (verzekerd ? '&verzekerd=ja' : '');
+
+        var br = '';
+        if (winst <= 0) {
+            br += row('Geen winst ingevuld', '-');
+        } else {
+            br += row('Winst vóór DGA-loon', fmt(winst));
+            br += row('─ Loonkosten DGA', '-' + fmt(s.loonkosten));
+            br += row('Belastbare winst', fmt(bv.belastbaar), 'total');
+            if (bv.belastbaar < 0) {
+                br += row('Verlies (verrekenbaar met andere jaren)', fmt(bv.belastbaar));
+            } else {
+                br += row('Vennootschapsbelasting', fmt(bv.vpb));
+                br += row('Winst na Vpb', fmt(bv.naVpb));
+                br += row('Uitgekeerd dividend', fmt(bv.dividend));
+                br += row('Box 2 (24,5% / 31%)', fmt(bv.box2));
+                br += row('Netto dividend', '<span style="color:#16a34a;">' + fmt(bv.nettoDiv) + '</span>', 'total');
+                if (bv.naVpb - bv.dividend > 0) br += row('Blijft in de BV', fmt(bv.naVpb - bv.dividend));
+            }
+        }
+        document.getElementById('bvRows').innerHTML = br;
+
+        // Vergelijking: gebruikelijk loon + dividend vs. volledige winst als salaris
+        var cmp = document.getElementById('compare');
+        var note = document.getElementById('compareNote');
+        if (winst <= 0 || winst <= s.loonkosten) {
+            cmp.innerHTML = '';
+            note.textContent = 'Vul een winst in die hoger is dan de loonkosten om salaris en dividend te vergelijken.';
+        } else {
+            // Alles als salaris: zoek het loon waarbij loon + Zvw (+ premies) de volledige winst opmaakt
+            var lo = 0, hi = winst;
+            for (var i = 0; i < 60; i++) {
+                var mid = (lo + hi) / 2;
+                if (berekenSalaris(mid, natura, t, verzekerd).loonkosten > winst) hi = mid; else lo = mid;
+            }
+            var alles = berekenSalaris(lo, natura, t, verzekerd);
+            var volDiv = berekenBv(winst, s.loonkosten, 1, box2Grens);
+            var aNetto = s.netto + volDiv.nettoDiv;
+            var aBel = s.lh + s.zvw + s.wv + volDiv.vpb + volDiv.box2;
+            var bBel = alles.lh + alles.zvw + alles.wv;
+            cmp.innerHTML =
+                '<tr><th></th><th>Huidig loon + dividend</th><th>Alles als salaris</th></tr>' +
+                '<tr><td>Bruto salaris</td><td>' + fmt(loonGeld) + '</td><td>' + fmt(lo) + '</td></tr>' +
+                '<tr><td>Loonheffing + Zvw</td><td>' + fmt(s.lh + s.zvw + s.wv) + '</td><td>' + fmt(bBel) + '</td></tr>' +
+                '<tr><td>Vpb + box 2</td><td>' + fmt(volDiv.vpb + volDiv.box2) + '</td><td>' + fmt(0) + '</td></tr>' +
+                '<tr class="total"><td>Netto in privé</td><td>' + fmt(aNetto) + '</td><td>' + fmt(alles.netto) + '</td></tr>';
+            var verschil = aNetto - alles.netto;
+            note.textContent = 'Uitgaande van volledige uitkering van de winst. ' + (verschil >= 0
+                ? 'Loon + dividend levert ' + fmt(verschil) + ' meer netto op.'
+                : 'Alles als salaris levert ' + fmt(-verschil) + ' meer netto op.');
+        }
+    }
+
+    function toggleParams() { document.getElementById('params-detail').classList.toggle('visible'); }
+    ['vergelijkbaar', 'hoogsteWerknemer', 'lagerBedrag', 'loonGeld', 'natura', 'winst'].forEach(function (id) {
+        document.getElementById(id).addEventListener('input', calculate);
+    });
+    ['situatie', 'volgGl', 'aow', 'verzekerd', 'uitkering', 'partner'].forEach(function (id) {
+        document.getElementById(id).addEventListener('change', calculate);
+    });
+    calculate();
+    </script>
+</body>
+</html>
