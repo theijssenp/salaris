@@ -46,10 +46,15 @@ for f in beroepen-data.js cao-data-2026.js loonheffing-2026.js salaris_calc.py \
 done
 
 # --- 5. opruimen: bestanden die niet meer in de repo zitten ---
-for f in "$BASE"/*; do
+for f in "$BASE"/* "$BASE"/._*; do
     b=$(basename "$f")
+    [ -f "$f" ] || continue
     case "$b" in
-        ._*|*.bak*|*.gz) continue;;
+        *.bak*) continue;;          # oude backups bewaren
+    esac
+    # AppleDouble-junk (._*) van macOS: altijd opruimen
+    case "$b" in
+        ._*) rm -f "$f"; echo "  VERWIJDER macOS-junk: $b"; continue;;
     esac
     if [ ! -f "$SRC/$b" ]; then
         echo "  VERWIJDER uit vhost (niet in repo): $b"
