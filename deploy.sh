@@ -21,10 +21,8 @@ if [ -d "$SRC/.git" ]; then
   fi
 fi
 
-# --- 1. backups (eenmalig; bestaande backups blijven staan) ---
-stamp=$(date +%Y%m%d-%H%M%S)
-[ -f $BASE/index.html.bak.20260921 ] || cp $BASE/index.html $BASE/index.html.bak.20260921
-[ -f $BASE/sitemap.xml.bak.20260921 ] || cp $BASE/sitemap.xml $BASE/sitemap.xml.bak.20260921
+# --- 1. geen backups meer in de vhost: de git-historie IS de backup ---
+# (vhost-backups zouden bij elke deploy door de opschoning in stap 5 weggehaald worden)
 
 # --- 2. sitemap altijd opnieuw genereren (lastmod = file-mtime) ---
 python3 $SRC/build_sitemap.py
@@ -49,12 +47,13 @@ done
 for f in "$BASE"/* "$BASE"/._*; do
     b=$(basename "$f")
     [ -f "$f" ] || continue
-    case "$b" in
-        *.bak*) continue;;          # oude backups bewaren
-    esac
     # AppleDouble-junk (._*) van macOS: altijd opruimen
     case "$b" in
         ._*) rm -f "$f"; echo "  VERWIJDER macOS-junk: $b"; continue;;
+    esac
+    # oude backups: staan al in de git-historie, opruimen
+    case "$b" in
+        *.bak*) rm -f "$f"; echo "  VERWIJDER oude backup: $b"; continue;;
     esac
     if [ ! -f "$SRC/$b" ]; then
         echo "  VERWIJDER uit vhost (niet in repo): $b"
