@@ -2,80 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://salaris.hodc.nl/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://salaris.hodc.nl/dga-salaris.html</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://salaris.hodc.nl/dga-loonaangifte.html</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://salaris.hodc.nl/salaris-per-beroep.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://salaris.hodc.nl/dga-salaris.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://salaris.hodc.nl/dga-loonaangifte.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaris.hodc.nl/cao-salarisschalen-2026.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaris.hodc.nl/belasting-schijven-2026.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/hoe-bereken-je-netto-salaris.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/bruto-netto-verschil.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/netto-salaris-met-vakantiegeld.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/minimumloon-2026.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/faq.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/over-ons.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://salaris.hodc.nl/privacy-policy.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://salaris.hodc.nl/cao-salarisschalen-2026.html</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
