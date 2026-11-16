@@ -24,7 +24,15 @@ import urllib.request
 from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STATE = os.path.join(HERE, ".cbs_last_modified")
+# LET OP: de state ligt bewust in de repo (~/hodc/salaris-beroepen), NIET naast
+# dit script. Cron draait de kopie in ~/.hermes/scripts/, terwijl de baseline
+# via `python3 ~/hodc/salaris-beroepen/cbs_watchdog.py --reset` gezet wordt.
+# Met een state-pad naast het script had elke kopie haar eigen baseline: de
+# cron-kopie vond nooit een state-bestand en meldde daardoor bij elke tick
+# "(geen baseline) -> wijziging" met identieke output. De monitor-hash bleef
+# dan constant, de agent-run werd onderdrukt en de echte wijziging van
+# 2026-10-30 (CBS 2025-docenten) is daardoor nooit verwerkt.
+STATE = os.path.expanduser("~/hodc/salaris-beroepen/.cbs_last_modified")
 TABEL = "86355NED"
 INFO_URL = f"https://opendata.cbs.nl/ODataApi/odata/{TABEL}/TableInfos"
 DATA_URL = f"https://opendata.cbs.nl/ODataApi/odata/{TABEL}/TypedDataSet?$filter=Perioden%20eq%20%27{{jaar}}JJ00%27"
@@ -101,6 +109,16 @@ def main():
 
     if not force and prev and mod == prev:
         # STIL: geen wijziging, geen output, exit 0
+        sys.exit(0)
+
+    # GEEN baseline (state ontbreekt) -> dit is NIET een wijziging maar een
+    # eerste run. We leggen de baseline vast en blijven stil. Anders zou de
+    # watchdog elke tick dezelfde "(geen baseline) -> <mod>"-regel printen,
+    # wat (a) een vals alarm is en (b) de monitor-hash constant houdt zodat
+    # de agent-run onderdrukt wordt.
+    if not force and not prev:
+        write_state(mod)
+        print(f"eerste run: baseline vastgelegd ({mod}) — geen wijziging, geen refresh nodig")
         sys.exit(0)
 
     # Wijziging gedetecteerd (of eerste run): draai de echte data-test
